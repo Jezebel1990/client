@@ -21,6 +21,7 @@ describe('<Main />', () => {
     const { container } = render(<Main />)
 
     // verifica se o background-color está correto
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#05031f' })
+    expect(container.firstChild).toHaveStyle(
+      { 'background-color': '#05031f' })
  })
 });
