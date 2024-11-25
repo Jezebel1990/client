@@ -5,12 +5,13 @@ module.exports = {
     '^.+\\.(ts|tsx)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.jest.json' }], // Ajuste a configuração do ts-jest aqui
   },
   moduleNameMapper: {
-    '^styled-components': 'styled-components/dist/styled-components.browser.cjs.js', // Correção da sintaxe do mapper
+    '^styled-components':
+     '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'], // Ignora diretórios do Next.js e node_modules nos testes
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'], // Arquivo de setup para inicializações de testes
-
+  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   collectCoverage: true, // Habilita a coleta de cobertura de testes
   collectCoverageFrom: [
     'src/**/*.ts(x)?', // Coleta cobertura de arquivos .ts e .tsx
