@@ -10,5 +10,14 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:@next/next/recommended"
-  ]
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-object-type": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/prop-types": "off"
+  }
 }

@@ -6,6 +6,7 @@ export default {
     border: {
       radius: '0.4rem'
     },
+    
     font: {
       family:
         "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
