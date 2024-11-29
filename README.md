@@ -1,10 +1,10 @@
-
 # React Avançado
-![Captura de tela 2024-10-22 022915](https://github.com/user-attachments/assets/1a06b901-7961-4eea-a686-075e36d64630)
 
+![Captura de tela 2024-10-22 022915](https://github.com/user-attachments/assets/1a06b901-7961-4eea-a686-075e36d64630)
 
 This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
 ![ci](https://github.com/React-Avancado/boilerplate-apps-router/workflows/ci/badge.svg)
+
 ## What is inside?
 
 This project uses lot of stuff as:

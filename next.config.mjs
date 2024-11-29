@@ -1,18 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async headers() {
-        return [
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
           {
-            source: '/(.*)',
-            headers: [
-              {
-                key: 'X-Content-Type-Options',
-                value: 'nosniff',
-              },
-            ],
-          },
-        ];
-      },
-};
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          }
+        ]
+      }
+    ]
+  }
+}
 
-export default nextConfig;
+export default nextConfig
