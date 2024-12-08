@@ -1,5 +1,5 @@
-import { Meta } from '@storybook/react'
-import Logo from '.'
+import { Meta } from '@storybook/react';
+import Logo from '.';
 
 export default {
   title: 'Logo',
