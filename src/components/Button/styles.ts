@@ -44,6 +44,7 @@ const wrapperModifiers = {
     background: linear-gradient(180deg, #FF77B0 0%, #A618DF 50%);
     color: ${theme.colors.white};
     border: 0;
+    cursor: pointer;
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
 
