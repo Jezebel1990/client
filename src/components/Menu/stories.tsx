@@ -7,7 +7,7 @@ import { Meta } from '@storybook/react';
       parameters: {
         layout: 'fullscreen',
         backgrounds: {
-          default: 'won-dark'
+          default: 'dark'
         }
     } 
     } as Meta;
