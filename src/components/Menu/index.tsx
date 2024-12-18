@@ -7,8 +7,13 @@ import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import Button from 'components/Button';
 
- const Menu = () => {
+export type MenuProps = {
+  username?: string
+}
+
+ const Menu = ({ username }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
+
  return (
 <S.Wrapper>
     <S.IconWrapper onClick={() => setIsOpen(true)}>
@@ -31,8 +36,16 @@ import Button from 'components/Button';
     <S.MenuNav>
       <S.MenuLink href="#">Home</S.MenuLink>
       <S.MenuLink href="#">Explore</S.MenuLink>
+
+    {!!username && (
+      <>
+       <S.MenuLink href="#">My account</S.MenuLink>
+       <S.MenuLink href="#">Wishlist</S.MenuLink>
+      </>
+    )}
     </S.MenuNav>
 
+{!username && (
     <S.RegisterBox>
       <Button fullWidth size="large">
          Log in now
@@ -42,6 +55,7 @@ import Button from 'components/Button';
         Sign Up
       </S.CreateAccount>
     </S.RegisterBox>
+  )}
     </S.MenuFull>
   </S.Wrapper>
 );

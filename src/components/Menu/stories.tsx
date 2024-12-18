@@ -1,17 +1,16 @@
-import { Meta } from '@storybook/react';
- import Menu from '.'; 
+import { Meta, StoryObj } from '@storybook/react';
+ import Menu, { MenuProps } from '.'; 
 
  export default {
      title: 'Menu',
       component: Menu,
-      parameters: {
-        layout: 'fullscreen',
-        backgrounds: {
-          default: 'dark'
-        }
-    } 
     } as Meta;
 
- export function Default(args: any) {
-    return <Menu {...args} />
+ export const Default: StoryObj<MenuProps> = (args: any) => <Menu {...args} />
+ 
+ Default.parameters = {
+    layout: 'fullscreen',
+    backgrounds: {
+      default: 'dark'
  }
+}
