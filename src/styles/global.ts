@@ -37,6 +37,11 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%; // 1rem = 10px == 10/16px = 62.5% (1.4rem = 14px)
@@ -45,6 +50,7 @@ const GlobalStyles = createGlobalStyle`
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
+      background-color: ${theme.colors.mainBg}
     }
   `}
 
