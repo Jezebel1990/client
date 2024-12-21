@@ -48,6 +48,10 @@ const wrapperModifiers = {
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxsmall};
 
+     &:hover {
+      background: linear-gradient(180deg, #ec146e 0%, #5c057e 50% )
+     }
+
     ${!!size && wrapperModifiers[size](theme)};
     ${!!fullWidth && wrapperModifiers.fullWidth()}
     ${!!hasIcon && wrapperModifiers.withIcon(theme)}
