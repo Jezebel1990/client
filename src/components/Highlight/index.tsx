@@ -4,7 +4,8 @@ import Button from 'components/Button';
 export type HighlightProps = {
   title: string
   subtitle: string
-  backgroundImage: string;
+  backgroundImage: string
+  floatImage?: string
   buttonLabel: string
   buttonLink: string
 }
@@ -14,10 +15,12 @@ export type HighlightProps = {
   title,
   subtitle,
   backgroundImage,
+  floatImage,
   buttonLabel,
   buttonLink
  }: HighlightProps) => (
 <S.Wrapper backgroundImage={backgroundImage}>
+  {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}
   <S.Content>
    <S.Title>{title}</S.Title>
     <S.Subtitle>{subtitle}</S.Subtitle>

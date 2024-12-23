@@ -12,6 +12,8 @@ type WrapperProps = Pick<HighlightProps, 'backgroundImage'>
     background-size: cover;
     height: 23rem;
     display: grid;
+     grid-template-areas: 'floatimage content';
+    grid-template-columns: 1.3fr 2fr;
 
   &::after {
     content: '';
@@ -26,10 +28,22 @@ type WrapperProps = Pick<HighlightProps, 'backgroundImage'>
   `}
   `}
  `
-
+export const FloatImage = styled.img`
+  ${({ theme }) => css`
+    grid-area: floatimage;
+    z-index: ${theme.layers.base};
+    max-height: 23rem;
+    max-width: 100%;
+    align-self: end;
+    ${media.greaterThan('medium')`
+      max-height: 32rem;
+    `}
+  `}
+`
 
  export const Content = styled.div`
    ${({ theme }) => css`
+   grid-area: content;
    z-index: ${theme.layers.base};
    text-align: right;
    padding: ${theme.spacings.xsmall};
