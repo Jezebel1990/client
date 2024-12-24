@@ -1,7 +1,6 @@
-import {
-  AddShoppingCart,
-  FavoriteBorder
-} from '@styled-icons/material-outlined';
+import { AddShoppingCart } from '@styled-icons/material-outlined';
+import { StarBorder, Star } from '@styled-icons/material-rounded';
+
 import Button from 'components/Button';
 import * as S from './styles';
 
@@ -11,6 +10,8 @@ export type GameCardProps = {
   img: string
   price: string
   promotionalPrice?: string
+  favorite?: boolean
+  onFav?: () => void
 }
 
  const GameCard = ({ 
@@ -18,7 +19,9 @@ export type GameCardProps = {
   developer,
   img,
   price,
-  promotionalPrice
+  promotionalPrice,
+  favorite = false,
+  onFav
   }: GameCardProps) => (
 <S.Wrapper>
    <S.ImageBox>
@@ -29,8 +32,12 @@ export type GameCardProps = {
         <S.Title>{title}</S.Title>
         <S.Developer>{developer}</S.Developer>
       </S.Info>
-      <S.FavButton role="button">
-        <FavoriteBorder aria-label="Add to Wishlist" />
+      <S.FavButton onClick={onFav} role="button">
+      {favorite ? (
+        <Star aria-label="Remove from Wishlist" />
+      ) : (
+        <StarBorder aria-label="Add to Wishlist" />
+      )}
       </S.FavButton>
       <S.BuyBox>
         {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}

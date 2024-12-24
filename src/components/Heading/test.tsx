@@ -46,8 +46,8 @@ it('should render a Heading with a secondary line color', () => {
   )
 
   const heading = screen.getByRole('heading', { name: /lorem ipsum/i })
-  expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #9747FF'})
-  expect(heading).toHaveStyleRule('border-bottom', '0.5rem solid #9747FF', {
+  expect(heading).toHaveStyle({ 'border-left': '0.7rem solid #6d47cc'})
+  expect(heading).toHaveStyleRule('border-bottom', '0.5rem solid #6d47cc', {
     modifier: '::after'
   })
 })
