@@ -56,4 +56,21 @@ it('should call onFav method when favorite is clicked', () => {
   fireEvent.click(screen.getAllByRole('button')[0])
   expect(onFav).toBeCalled()
 })
+
+
+
+it('should render Ribbon', () => {
+  renderWithTheme(
+    <GameCard
+      {...props}
+      ribbon="My Ribbon"
+      ribbonColor="secondary"
+      ribbonSize="small"
+    />
+  )
+  const ribbon = screen.getByText(/my ribbon/i)
+  expect(ribbon).toHaveStyle({ backgroundColor: '#6d47cc' })
+  expect(ribbon).toHaveStyle({ height: '2.6rem', fontSize: '1.2rem' })
+  expect(ribbon).toBeInTheDocument()
+})
 })

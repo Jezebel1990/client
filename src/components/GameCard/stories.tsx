@@ -9,7 +9,7 @@ import { Meta, StoryObj } from '@storybook/react';
         developer: 'Rockstar Games',
         img: 'https://app2top.com/wp-content/uploads/2024/03/Proektirovanie-boevoj-sistemy--300x140.png',
         price: 'R$ 235,00',
-        promotionalPrice: 'R$ 200,00'
+        promotionalPrice: 'R$ 215,00'
     },
     argTypes: {
         onFav: { action: 'clicked' }
@@ -17,7 +17,9 @@ import { Meta, StoryObj } from '@storybook/react';
     parameters: {
       backgrounds: {
         default: 'dark'
-      }
+      },
+      onFav: { action: 'clicked' },
+    ribbon: { type: 'string' }
       }
 } as Meta;
  export const Default: StoryObj<GameCardProps> = (args:any) => (
@@ -27,3 +29,15 @@ import { Meta, StoryObj } from '@storybook/react';
  )
  
  Default.args = {}
+
+ export const WithRibbon: StoryObj<GameCardProps> = (args: any) => (
+  <div style={{ width: '30rem' }}>
+    <GameCard {...args} />
+  </div>
+)
+
+ WithRibbon.args = {
+  ribbon: '20% OFF',
+  ribbonSize: 'small',
+  ribbonColor: 'primary'
+}
