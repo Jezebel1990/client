@@ -16,7 +16,7 @@ const config: Config = {
   coverageProvider: 'v8',
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
-  modulePaths: ['<rootDir>/src/'],
+  modulePaths: ['<rootDir>/src/','<rootDir>/.jest'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
