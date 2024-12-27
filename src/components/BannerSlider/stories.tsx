@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
- import BannerSlider from '.'; 
+ import BannerSlider, { BannerSliderProps } from '.'; 
 
  const items = [
     {
