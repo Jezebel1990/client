@@ -33,7 +33,7 @@ import { Meta, StoryObj } from '@storybook/react';
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as Meta;

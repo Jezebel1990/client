@@ -1,16 +1,15 @@
-import { Meta } from '@storybook/react'; 
+import { Meta, StoryObj } from '@storybook/react';
 import Footer from '.';
 
+export default {
+  title: 'Footer',
+  component: Footer
+} as Meta;
 
- export default { 
-    title: 'Footer',
-     component: Footer
-} as Meta; 
+export const Default: StoryObj = () => (
+<div style={{ maxWidth: '130rem', margin: '0 auto' }}>
+    <Footer />
+  </div>
+)
 
-export function Default() {
-    return (
-        <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
-            <Footer />
-        </div>
-    );
-}
+

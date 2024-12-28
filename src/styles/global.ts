@@ -4,7 +4,7 @@ import {
   createGlobalStyle,
   css,
   DefaultTheme,
-  GlobalStyleComponent 
+  GlobalStyleComponent
   } from 'styled-components';
 
 type GlobalStylesProps = {
@@ -12,8 +12,8 @@ type GlobalStylesProps = {
 }
 
 const GlobalStyles: GlobalStyleComponent<
-GlobalStylesProps,
-DefaultTheme
+  GlobalStylesProps,
+  DefaultTheme
 > = createGlobalStyle`
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -52,10 +52,11 @@ DefaultTheme
   &::after {
     box-sizing: inherit;
   }
+}
 
-  ${({ theme, removeBg }) => css`
+${({ theme, removeBg }) => css`
     html {
-      font-size: 62.5%; // 1rem = 10px == 10/16px = 62.5% (1.4rem = 14px)
+      font-size: 62.5%;
     }
 
     body {
@@ -64,10 +65,11 @@ DefaultTheme
 
       ${!removeBg &&
       css`
-      background-color: ${theme.colors.mainBg};
+        background-color: ${theme.colors.mainBg};
+      `}
+    }
   `}
-  }
-`}
+
 `
 
 export default GlobalStyles

@@ -12,7 +12,7 @@ import media from 'styled-media-query';
 export const LogoWrapper = styled.div`
  ${media.lessThan('medium')`
    position: absolute;
-   left: 0%;
+   left: 50%;
    transform: translateX(-50%);
     `}
 `
@@ -58,12 +58,12 @@ ${({ theme }) => css`
 
  &:hover{
   &::after {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 0.3rem;
-  background-color: ${theme.colors.primary};
-  animation: hoverAnimation 0.2s forwards;
+   content: '';
+   position: absolute;
+   display: block;
+   height: 0.3rem;
+   background-color: ${theme.colors.primary};
+   animation: hoverAnimation 0.2s forwards;
  }
 
 
@@ -92,7 +92,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 background: ${theme.colors.white};
-position: absolute;
+position: fixed;
 top: 0;
 bottom: 0;
 left: 0;

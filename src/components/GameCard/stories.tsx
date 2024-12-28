@@ -4,6 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
  export default { 
     title: 'GameCard',
      component: GameCard,
+     parameters: {
+      backgrounds: {
+        default: 'won-dark'
+      }
+    },
      args: {
         title: 'Population Zero',
         developer: 'Rockstar Games',
@@ -12,12 +17,6 @@ import { Meta, StoryObj } from '@storybook/react';
         promotionalPrice: 'R$ 215,00'
     },
     argTypes: {
-        onFav: { action: 'clicked' }
-      },
-    parameters: {
-      backgrounds: {
-        default: 'dark'
-      },
       onFav: { action: 'clicked' },
     ribbon: { type: 'string' }
       }

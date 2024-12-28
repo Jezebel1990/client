@@ -6,7 +6,7 @@ export default {
   component: Logo,
   parameters: {
     backgrounds: {
-      default: 'dark'
+      default: 'won-dark'
     }
   }
 } as Meta

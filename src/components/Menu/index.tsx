@@ -9,10 +9,11 @@ import Button from 'components/Button';
 import MediaMatch from 'components/MediaMatch';
 
 export type MenuProps = {
-  username?: string
+  username?: string | null
+  hideOnMobile?: boolean
 }
 
- const Menu = ({ username }: MenuProps) => {
+ const Menu = ({ username,   hideOnMobile = false }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
  return (
@@ -24,7 +25,7 @@ export type MenuProps = {
     </MediaMatch>
 
     <S.LogoWrapper >
-      <Logo hideOnMobile />
+      <Logo hideOnMobile={hideOnMobile} />
     </S.LogoWrapper>
 
     <MediaMatch greaterThan='medium'>
