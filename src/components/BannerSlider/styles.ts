@@ -22,7 +22,7 @@ import * as BannerStyles from 'components/Banner/styles';
         margin: 0 ${theme.spacings.xxsmall};
         cursor: pointer;
         &.slick-active {
-          background: ${theme.colors.primary};
+          background: ${theme.colors.secondary};
         }
       }
       button {

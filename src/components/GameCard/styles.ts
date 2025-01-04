@@ -64,7 +64,7 @@ export const Developer = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.bold};
-    color: ${theme.colors.gray};
+    color: ${theme.colors.lightGray};
   `}
 `
 export const FavButton = styled.div`
@@ -102,7 +102,7 @@ type PriceProps = {
     `,
   
     promotional: (theme: DefaultTheme) => css`
-      color: ${theme.colors.gray};
+      color: ${theme.colors.lightGray};
       text-decoration: line-through;
       margin-right: ${theme.spacings.xxsmall};
     `
