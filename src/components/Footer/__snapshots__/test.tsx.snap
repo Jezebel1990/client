@@ -2,7 +2,7 @@
 
 exports[`<Footer /> should render 4 column topics 1`] = `
 .c5 {
-  color: #030517;
+  color: #FAFAFA;
   position: relative;
   margin-bottom: 3.2rem;
   font-size: 1.6rem;
@@ -35,7 +35,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 .c3 a,
 .c3 span {
   display: block;
-  color: #8F8F8F;
+  color: #c2c0c0;
   text-decoration: none;
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
@@ -46,7 +46,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 }
 
 .c6 {
-  color: #8F8F8F;
+  color: #c2c0c0;
   font-size: 1.2rem;
   margin-top: 4.0rem;
   margin-bottom: 3.2rem;
@@ -54,7 +54,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 }
 
 .c1 {
-  color: #030517;
+  color: #FAFAFA;
   width: 11rem;
   height: 3.3rem;
   display: flex;
@@ -84,7 +84,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
 >
   <main
     class="c1"
-    color="black"
+    color="white"
   >
     <svg
       aria-label="Won Games"
@@ -201,7 +201,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     >
       <h2
         class="c4 c5"
-        color="black"
+        color="white"
         linecolor="secondary"
       >
         Contact Us
@@ -217,7 +217,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     >
       <h2
         class="c4 c5"
-        color="black"
+        color="white"
         linecolor="secondary"
       >
         Follow us
@@ -260,7 +260,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     >
       <h2
         class="c4 c5"
-        color="black"
+        color="white"
         linecolor="secondary"
       >
         Links
@@ -291,7 +291,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     >
       <h2
         class="c4 c5"
-        color="black"
+        color="white"
         linecolor="secondary"
       >
         Location

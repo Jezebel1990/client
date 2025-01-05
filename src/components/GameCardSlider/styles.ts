@@ -18,14 +18,14 @@ export const Wrapper = styled.section<WrapperProps>`
       height: 100%;
     }
     .slick-list {
-      margin: 0 -${theme.spacings.xxsmall};
+      margin: 0 - ${theme.spacings.xxsmall};
     }
     ${media.greaterThan('large')`
       .slick-slide > div {
         margin: 0 ${theme.spacings.xsmall};
       }
       .slick-list {
-        margin: 0 -${theme.spacings.xsmall};
+        margin: 0 - ${theme.spacings.xsmall};
       }
     `}
     .slick-prev,
