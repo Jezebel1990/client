@@ -2,6 +2,7 @@ import { AddShoppingCart } from '@styled-icons/material-outlined';
 import { StarBorder, Star } from '@styled-icons/material-rounded';
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
 import Button from 'components/Button';
+import Image from 'next/image'
 import * as S from './styles';
 
 export type GameCardProps = {
@@ -36,7 +37,7 @@ export type GameCardProps = {
       </Ribbon>
     )}
    <S.ImageBox>
-      <img src={img} alt={title} />
+      <Image src={img} alt={title} layout="responsive" width={100} height={100} />
     </S.ImageBox>
     <S.Content>
       <S.Info>

@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 
 import { GameCardSliderProps } from '.'
 type WrapperProps = Pick<GameCardSliderProps, 'color'>
+
 export const Wrapper = styled.section<WrapperProps>`
   ${({ theme, color }) => css`
     ${media.lessThan('huge')`
@@ -40,9 +41,11 @@ export const Wrapper = styled.section<WrapperProps>`
       padding: 0;
       transform: translate(0, -50%);
     }
+
     .slick-prev {
       left: -${theme.spacings.xxlarge};
     }
+    
     .slick-next {
       right: -${theme.spacings.xxlarge};
     }
