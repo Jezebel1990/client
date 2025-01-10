@@ -1,28 +1,28 @@
-const nextConfig = {
+export default {
   experimental: {
-    workerThreads: false,
-    cpus: 1,
+    cpus: 6, 
   },
-  staticPageGenerationTimeout: 300,
+  staticPageGenerationTimeout: 300, 
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.imgur.com',
+        hostname: 'i.imgur.com', 
       },
     ],
   },
-  headers: async () => [
-    {
-      source: '/(.*)',
-      headers: [
-        {
-          key: 'X-Content-Type-Options',
-          value: 'nosniff',
-        },
-      ],
-    },
-  ],
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff', 
+          },
+        ],
+      },
+    ];
+  },
 };
 
-export default nextConfig;
