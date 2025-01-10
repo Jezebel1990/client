@@ -1,11 +1,17 @@
-# React Avançado
+# Won Games 🎮
 
-![Captura de tela 2024-10-22 022915](https://github.com/user-attachments/assets/1a06b901-7961-4eea-a686-075e36d64630)
+![Home Page](public/img/home-page.png)
 
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
-![ci](https://github.com/React-Avancado/boilerplate-apps-router/workflows/ci/badge.svg)
 
-## What is inside?
+Won Games is a game e-commerce developed during Willian Justen's Advanced React course. This application was designed to offer customers the best shopping experience, including features such as:
+
+🔎 Search and Filters: Find games quickly with advanced filters.
+🛒 Shopping Cart: Add and manage your favorite games in the cart.
+💳 Payment and Customer Area: Complete your purchases safely and access your order history.
+In addition, the application has a fully customized CMS (Content Management System), allowing administrators to have full control over the store.
+
+
+## Technologies Used
 
 This project uses lot of stuff as:
 
@@ -19,15 +25,25 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
-## Usage template
+## How to Run the Project
+
+1. Clone the repository:
 
 ```bash
-npx create-next-app -e https://github.com/Jezebel1990/boilerplate-apps-router
+git clone https://github.com/Jezebel1990/client.git
 ```
 
-## Getting Started
+2. Access the project directory:
+```bash
+cd client
+```
 
-First, run the development server:
+3. Install the dependencies:
+```bash
+ npm install
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
@@ -37,7 +53,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## Commands
 
@@ -50,17 +65,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 - `storybook`: runs storybook on `localhost:6006`
 - `build-storybook`: create the build version of storybook
 
-## Learn More
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information
 
-To learn more about Next.js, take a look at the following resources:
+Made with ♥ by [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 👋 Get in touch!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
