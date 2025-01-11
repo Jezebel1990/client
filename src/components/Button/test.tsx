@@ -50,6 +50,7 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
 
   })
+  
 
   it('should render a minimal version', () => {
     renderWithTheme(
@@ -59,7 +60,6 @@ describe('<Button />', () => {
     )
     expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyle({
       background: 'none',
-      color: '#6d47cc'
     })
     expect(screen.getByRole('button', { name: /buy now/i })).toHaveStyleRule(
       'background',

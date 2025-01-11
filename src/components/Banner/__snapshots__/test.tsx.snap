@@ -56,7 +56,7 @@ exports[`<Banner /> should render correctly 1`] = `
 }
 
 .c5:hover {
-  background: linear-gradient(180deg,#ec146e 0%,#5c057e 50% );
+  background: linear-gradient(180deg, #ec146e 0%, #5c057e 50% );
 }
 
 @media (max-width: 1170px) {

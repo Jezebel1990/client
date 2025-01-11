@@ -12,7 +12,7 @@ import { Meta, StoryObj } from '@storybook/react';
      args: {
         title: 'Population Zero',
         developer: 'Rockstar Games',
-        img: 'https://app2top.com/wp-content/uploads/2024/03/Proektirovanie-boevoj-sistemy--300x140.png',
+        img: 'https://i.imgur.com/gQSWehi.png',
         price: 'R$ 235,00',
         promotionalPrice: 'R$ 215,00'
     },
