@@ -1,4 +1,4 @@
-# Won Games 🎮
+# 🎮 Won Games 🎮
 
 ![Home Page](public/img/home-page.png)
 
