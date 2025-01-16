@@ -45,7 +45,6 @@ import { CheckboxProps } from '.'
  `}
 `
 
-
  export const Label = styled.label<Pick<CheckboxProps, 'labelColor'>>`
   ${({ theme, labelColor }) => css`
     cursor: pointer;
