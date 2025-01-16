@@ -3,8 +3,12 @@ import { Meta, StoryObj } from '@storybook/react';
 
   export default { 
     title: 'Checkbox',
-    component: Checkbox
+    component: Checkbox,
+    argTypes: {
+      onCheck: { action: 'checked' }
+    }
 } as Meta;
- export const Default: StoryObj<CheckboxProps> = (args:any) => <Checkbox {...args} />
-
+ export const Default: StoryObj<CheckboxProps> = (args:any) => (
+ <Checkbox isChecked {...args} />
+ )
  Default.args={}
