@@ -20,6 +20,9 @@ const wrapperModifiers = {
     `}
   `,
 
+ huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
+  `,
 
     lineLeft: (theme: DefaultTheme, lineColor: lineColors) => css` 
      padding-left: ${theme.spacings.xxsmall};
