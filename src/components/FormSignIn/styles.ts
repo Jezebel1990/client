@@ -1,8 +1,5 @@
 import styled, { css } from 'styled-components';
-import { lighten, darken } from 'polished'
-import * as TextFieldStyles from 'components/TextField/styles'
-import * as ButtonStyles from 'components/Button/styles'
-
+import { lighten } from 'polished'
 
 export const ForgotPassword = styled.a`
   ${({ theme }) => css`
