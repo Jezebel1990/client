@@ -47,6 +47,11 @@ import * as LogoStyles from '../../components/Logo/styles';
    height: 100%;
    position: relative;
    z-index: ${theme.layers.base};
+
+   a {
+      width: fit-content;
+      height: fit-content;
+    }
  `}
 `
 

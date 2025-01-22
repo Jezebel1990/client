@@ -1,6 +1,7 @@
 import * as S from './styles';
 import Logo from "../../components/Logo";
 import Heading from "../../components/Heading";
+import Link from 'next/link'
 
 type AuthProps = {
   title: string
@@ -11,7 +12,12 @@ type AuthProps = {
 <S.Wrapper>
  <S.BannerBlock>
   <S.BannerContent>
-  <Logo  id="banner"/>
+  <Link href="/" legacyBehavior>
+  <a>
+  <Logo id="banner"/>
+  </a>
+  </Link>
+
 <div>
   <Heading size="huge">All your favorite games in one place</Heading>
   <S.Subtitle>
@@ -25,7 +31,11 @@ type AuthProps = {
 
   <S.Content>
     <S.ContentWrapper>
+     <Link href="/" legacyBehavior>
+     <a>
       <Logo id="content" color="black" size="large" />
+    </a>
+    </Link>
       <Heading color="black" lineColor="secondary" lineLeft>
         {title}
       </Heading>
