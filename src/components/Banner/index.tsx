@@ -1,6 +1,6 @@
-import * as S from './styles';
-import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon';
-import Button from 'components/Button';
+import * as S from './styles'
+import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
+import Button from 'components/Button'
 
 export type BannerProps = {
   img: string
@@ -41,4 +41,4 @@ const Banner = ({
  </S.Caption>
 </S.Wrapper>
 );
- export default Banner;
+ export default Banner

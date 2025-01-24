@@ -42,5 +42,5 @@ describe('<Banner />', () => {
       height: '2.6rem',
       fontSize: '1.2rem'
     })
-  });
+  })
 })

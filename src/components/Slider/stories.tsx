@@ -1,13 +1,13 @@
-import { Meta, StoryObj } from '@storybook/react';
- import Slider from '.';
-import { Settings } from 'react-slick';
-import { styled } from 'styled-components';
+import { Meta, StoryObj } from '@storybook/react'
+ import Slider from '.'
+import { Settings } from 'react-slick'
+import { styled } from 'styled-components'
 
 
  export default { 
     title: 'Slider',
      component: Slider
-} as Meta;
+} as Meta
 
 
 const settings: Settings = {
@@ -57,7 +57,7 @@ const settings: Settings = {
             <Slide>5</Slide>
             <Slide>6</Slide>
         </Slider>
-    );
+    )
 }
 
 

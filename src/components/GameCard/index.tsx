@@ -1,9 +1,9 @@
-import { AddShoppingCart } from '@styled-icons/material-outlined';
-import { StarBorder, Star } from '@styled-icons/material-rounded';
+import { AddShoppingCart } from '@styled-icons/material-outlined'
+import { StarBorder, Star } from '@styled-icons/material-rounded'
 import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
-import Button from 'components/Button';
+import Button from 'components/Button'
 import Image from 'next/image'
-import * as S from './styles';
+import * as S from './styles'
 
 export type GameCardProps = {
   title: string
@@ -60,4 +60,4 @@ export type GameCardProps = {
 </S.Wrapper>
 )
 
- export default GameCard;
+ export default GameCard

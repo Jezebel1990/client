@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Footer from '.';
+import { Meta, StoryObj } from '@storybook/react'
+import Footer from '.'
 
 const meta: Meta<typeof Footer> = {
   title: 'Footer',
@@ -11,9 +11,9 @@ const meta: Meta<typeof Footer> = {
   },
 };
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof Footer>;
+type Story = StoryObj<typeof Footer>
 
 export const Default: Story = {
   render: () => (
@@ -21,4 +21,4 @@ export const Default: Story = {
       <Footer />
     </div>
   ),
-};
+}

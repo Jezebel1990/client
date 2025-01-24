@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react'
 
-import GameCardSlider, { GameCardSliderProps } from '.';
-import items from './mock';
+import GameCardSlider, { GameCardSliderProps } from '.'
+import items from './mock'
 
 export default {
   title: 'GameCardSlider',
@@ -24,4 +24,4 @@ export const Default: StoryObj<GameCardSliderProps> = {
   args: {
     items,
   },
-};
+}

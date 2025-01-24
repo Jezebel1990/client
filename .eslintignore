@@ -1,2 +1,3 @@
 !.storybook
 !.jest
+src/types/styled-components.d.ts

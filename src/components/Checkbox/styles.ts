@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 import { CheckboxProps } from '.'
 
  export const Wrapper = styled.div`

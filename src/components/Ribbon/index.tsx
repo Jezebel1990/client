@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './styles'
 
 export type RibbonColors = 'primary' | 'secondary'
 export type RibbonSizes = 'normal' | 'small'
@@ -19,6 +19,6 @@ export type RibbonProps = {
 <S.Wrapper color={color} size={size}>
   {children}
   </S.Wrapper>
-);
+)
 
-export default Ribbon;
+export default Ribbon

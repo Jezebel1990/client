@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 import { GameCardSliderProps } from '.'
 type WrapperProps = Pick<GameCardSliderProps, 'color'>

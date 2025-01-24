@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Banner, { BannerProps} from '.'; 
+import { Meta, StoryObj } from '@storybook/react'
+import Banner, { BannerProps} from '.'
 
 export default {
  title: 'Banner',
@@ -16,10 +16,10 @@ export default {
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death'
  }
-} as Meta; 
+} as Meta
 
 
-export const Default: StoryObj<BannerProps> = (args: any) => <Banner {...args} />;
+export const Default: StoryObj<BannerProps> = (args: any) => <Banner {...args} />
 
 Default.parameters = {
     layout: 'fullscreen'

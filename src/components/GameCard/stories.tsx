@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
- import GameCard, { GameCardProps } from '.';
+import { Meta, StoryObj } from '@storybook/react'
+ import GameCard, { GameCardProps } from '.'
  
  export default { 
     title: 'GameCard',

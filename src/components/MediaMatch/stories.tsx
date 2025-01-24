@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import MediaMatch from '.' ;
+import { Meta, StoryObj } from '@storybook/react'
+import MediaMatch from '.' 
 
 export default { 
     title: 'MediaMatch',

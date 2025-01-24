@@ -1,5 +1,5 @@
-import * as S from './styles';
-import {forwardRef, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
+import * as S from './styles'
+import {forwardRef, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 
 type ButtonTypes = 
  | AnchorHTMLAttributes<HTMLAnchorElement> 
@@ -35,5 +35,5 @@ ref={ref}
   {icon}
   {!!children && <span>{children}</span>}
 </S.Wrapper>
-);
- export default forwardRef(Button);
+)
+ export default forwardRef(Button)

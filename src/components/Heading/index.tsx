@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './styles'
 
 export type lineColors = 'primary' | 'secondary'
 
@@ -30,4 +30,4 @@ export type HeadingProps = {
   </S.Wrapper>
  )
 
- export default Heading;
+ export default Heading

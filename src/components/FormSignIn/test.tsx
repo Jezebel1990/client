@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react';
+import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import FormSignIn from '.';
+import FormSignIn from '.'
 
 describe('<FormSignIn />', () => {
   it('should render the form', () => {

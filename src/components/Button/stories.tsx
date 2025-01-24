@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart';
-import Button, { ButtonProps } from '.';
+import { Meta, StoryObj } from '@storybook/react'
+import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
+import Button, { ButtonProps } from '.'
 
 export default {
   title: 'Button',
@@ -39,7 +39,7 @@ export const withIcon: StoryObj<ButtonProps> = {
     children: 'Buy now',
     icon: <AddShoppingCart />,
   },
-};
+}
 
 export const asLink: StoryObj<ButtonProps> = {
   args: {
@@ -48,4 +48,4 @@ export const asLink: StoryObj<ButtonProps> = {
     as: 'a',
     href: '/link',
   },
-};
+}
