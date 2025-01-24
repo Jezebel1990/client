@@ -11,6 +11,7 @@
     "generate": "npx plop --plopfile generators/plopfile.js",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write .",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
@@ -80,4 +81,5 @@
     "ts-node": "^10.9.2",
     "typescript-eslint": "^8.8.1"
   }
+  
 }
