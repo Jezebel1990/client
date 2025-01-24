@@ -1,26 +1,25 @@
-export default {
-  output: "standalone",
+const nextConfig = {
 
   experimental: {
-    cpus: 6, 
+    cpus: 6,
   },
-  staticPageGenerationTimeout: 300, 
+  staticPageGenerationTimeout: 300,
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'i.imgur.com', 
+        protocol: "https",
+        hostname: "i.imgur.com",
       },
     ],
   },
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: [
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff', 
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
         ],
       },
@@ -28,3 +27,4 @@ export default {
   },
 };
 
+export default nextConfig;

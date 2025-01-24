@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
-import { screen } from '@testing-library/react';
-import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart';
+import { screen } from '@testing-library/react'
+import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
 import Button from '.'
 import { renderWithTheme } from 'utils/tests/helpers';
 

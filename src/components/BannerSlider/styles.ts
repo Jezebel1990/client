@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
-import * as BannerStyles from 'components/Banner/styles';
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
+import * as BannerStyles from 'components/Banner/styles'
 
 
  export const Wrapper = styled.section`

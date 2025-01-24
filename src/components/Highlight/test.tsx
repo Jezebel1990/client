@@ -1,6 +1,6 @@
-import {screen } from '@testing-library/react';
-import { renderWithTheme } from 'utils/tests/helpers';
-import * as S from './styles';
+import {screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
+import * as S from './styles'
 import Highlight from '.'
 
 const props = {

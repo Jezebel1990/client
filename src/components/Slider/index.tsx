@@ -1,5 +1,5 @@
-import * as S from './styles';
-import SlickSlider, { Settings } from 'react-slick';
+import * as S from './styles'
+import SlickSlider, { Settings } from 'react-slick'
 
 export type SliderSettings = Settings
 
@@ -12,6 +12,6 @@ export type SliderProps = {
 <S.Wrapper>
   <SlickSlider {...settings}>{children}</SlickSlider>
 </S.Wrapper>
-); 
+)
 
 export default Slider

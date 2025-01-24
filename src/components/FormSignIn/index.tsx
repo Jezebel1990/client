@@ -1,9 +1,9 @@
-import TextField from 'components/TextField';
-import Link from 'next/link';
-import { Email, Lock } from 'styled-icons/material-outlined';
-import Button from 'components/Button';
+import TextField from 'components/TextField'
+import Link from 'next/link'
+import { Email, Lock } from 'styled-icons/material-outlined'
+import Button from 'components/Button'
 import * as S from './styles'
-import { FormWrapper, FormLink } from 'components/Form';
+import { FormWrapper, FormLink } from 'components/Form'
 
  const FormSignIn = () => (
 <FormWrapper>
@@ -34,5 +34,5 @@ import { FormWrapper, FormLink } from 'components/Form';
       </FormLink>
   </form>
 </FormWrapper>
-);
- export default FormSignIn;
+)
+ export default FormSignIn

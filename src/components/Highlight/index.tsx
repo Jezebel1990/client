@@ -1,5 +1,5 @@
-import * as S from './styles';
-import Button from 'components/Button';
+import * as S from './styles'
+import Button from 'components/Button'
 
 export type HighlightProps = {
   title: string
@@ -31,5 +31,5 @@ export type HighlightProps = {
     </Button>
     </S.Content>
 </S.Wrapper>
-);
- export default Highlight;
+)
+ export default Highlight

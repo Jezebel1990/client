@@ -1,7 +1,7 @@
-import styled, { css, DefaultTheme } from 'styled-components'; 
+import styled, { css, DefaultTheme } from 'styled-components' 
 import { darken } from 'polished'
 
-import { RibbonProps,  RibbonColors } from '.';
+import { RibbonProps,  RibbonColors } from '.'
 
 const wrapperModifiers = {
     color: (theme: DefaultTheme, color: RibbonColors) => css`

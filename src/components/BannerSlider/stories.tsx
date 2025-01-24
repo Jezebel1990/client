@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react';
- import BannerSlider, { BannerSliderProps } from '.'; 
+import { Meta, StoryObj } from '@storybook/react'
+ import BannerSlider, { BannerSliderProps } from '.'
 
- import items from './mock';
+ import items from './mock'
  
  export default { 
     title: 'BannerSlider',

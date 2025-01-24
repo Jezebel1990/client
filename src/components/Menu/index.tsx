@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { useState } from 'react';
-import * as S from './styles';
+import Link from 'next/link'
+import { useState } from 'react'
+import * as S from './styles'
 import Logo from 'components/Logo'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
-import Button from 'components/Button';
-import MediaMatch from 'components/MediaMatch';
+import Button from 'components/Button'
+import MediaMatch from 'components/MediaMatch'
 
 export type MenuProps = {
   username?: string | null
@@ -84,6 +84,6 @@ export type MenuProps = {
   )}
     </S.MenuFull>
   </S.Wrapper>
-);
+)
 }
- export default Menu;
+ export default Menu

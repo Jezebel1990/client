@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
- import Highlight, { HighlightProps } from '.';
+import { Meta, StoryObj } from '@storybook/react'
+ import Highlight, { HighlightProps } from '.'
 
 import item from './mock';
 
@@ -7,7 +7,7 @@ import item from './mock';
     title: 'Highlight',
      component: Highlight,
      args: { ... item }
-} as Meta;
+} as Meta
 
  export const Default: StoryObj<HighlightProps> = (args: any) => (
   <div style={{ maxWidth: '104rem' }}>

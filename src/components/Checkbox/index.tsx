@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, useState } from 'react'
-import * as S from './styles';
+import * as S from './styles'
 
 export type CheckboxProps = {
   onCheck?: (status: boolean) => void
@@ -45,4 +45,4 @@ export type CheckboxProps = {
   )
 }
 
- export default Checkbox;
+ export default Checkbox

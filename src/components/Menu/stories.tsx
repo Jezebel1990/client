@@ -1,10 +1,10 @@
-import { Meta, StoryObj } from '@storybook/react';
-import Menu, { MenuProps } from '.';
+import { Meta, StoryObj } from '@storybook/react'
+import Menu, { MenuProps } from '.'
 
 export default {
   title: 'Menu',
   component: Menu,
-} as Meta;
+} as Meta
 
 export const Default: StoryObj<MenuProps> = (args: any) => <Menu {...args} />
 

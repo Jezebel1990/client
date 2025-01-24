@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import media from 'styled-media-query';
-import { HighlightProps } from '.';
+import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
+import { HighlightProps } from '.'
 
 type WrapperProps = Pick<HighlightProps, 'backgroundImage'| 'alignment'>
 
