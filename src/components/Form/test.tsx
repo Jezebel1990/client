@@ -5,12 +5,11 @@ describe('<Form />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(
       <FormWrapper>
-      <FormLink>
-       My nice <a href="#">link</a>
-     </FormLink>
-    </FormWrapper>
+        <FormLink>
+          My nice <a href="#">link</a>
+        </FormLink>
+      </FormWrapper>,
     )
-   expect(container.parentElement).toMatchSnapshot()
-  
+    expect(container.parentElement).toMatchSnapshot()
   })
 })

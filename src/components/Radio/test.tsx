@@ -8,35 +8,40 @@ import Radio from '.'
 describe('<Radio />', () => {
   it('should render with label (white)', () => {
     const { container } = renderWithTheme(
-      <Radio label="Radio" labelFor="check" value="anyValue" />
-    );
+      <Radio label="Radio" labelFor="check" value="anyValue" />,
+    )
 
     const label = screen.getByText('Radio')
     expect(label).toBeInTheDocument()
     expect(label).toHaveStyle({ color: theme.colors.white })
 
     expect(container.firstChild).toMatchSnapshot()
-  });
+  })
 
   it('should render with label (black)', () => {
     renderWithTheme(<Radio label="Radio" labelColor="black" />)
-    
+
     const label = screen.getByText('Radio')
     expect(label).toBeInTheDocument()
     expect(label).toHaveStyle({ color: theme.colors.black })
-  });
+  })
 
   it('should render without label', () => {
     renderWithTheme(<Radio />)
-    
+
     expect(screen.queryByLabelText('Radio')).not.toBeInTheDocument()
-  });
+  })
 
   it('should dispatch onCheck when radio status changes', async () => {
     const onCheck = jest.fn()
     renderWithTheme(
-      <Radio label="Radio" labelFor="Radio" onCheck={onCheck} value="anyValue" />
-    );
+      <Radio
+        label="Radio"
+        labelFor="Radio"
+        onCheck={onCheck}
+        value="anyValue"
+      />,
+    )
 
     expect(onCheck).not.toHaveBeenCalled()
 
@@ -51,7 +56,7 @@ describe('<Radio />', () => {
 
   it('should be accessible with tab', async () => {
     renderWithTheme(<Radio label="Radio" labelFor="Radio" />)
-    
+
     const radio = screen.getByRole('radio')
 
     expect(document.body).toHaveFocus()

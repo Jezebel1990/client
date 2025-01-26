@@ -1,5 +1,4 @@
 const nextConfig = {
-
   experimental: {
     cpus: 6,
   },
@@ -7,24 +6,24 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "i.imgur.com",
+        protocol: 'https',
+        hostname: 'i.imgur.com',
       },
     ],
   },
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: '/(.*)',
         headers: [
           {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
         ],
       },
-    ];
+    ]
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

@@ -6,9 +6,9 @@ export default {
   component: Logo,
   parameters: {
     backgrounds: {
-      default: 'won-dark'
-    }
-  }
+      default: 'won-dark',
+    },
+  },
 } as Meta
 
 export function Default(args: any) {

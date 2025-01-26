@@ -1,4 +1,4 @@
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import { TextFieldProps } from '.'
 type IconPositionProps = Pick<TextFieldProps, 'iconPosition'>
@@ -43,7 +43,7 @@ export const Icon = styled.div<IconPositionProps>`
     display: flex;
     width: 2.2rem;
     color: ${theme.colors.lightGray};
-     order: ${iconPosition === 'right' ? 1 : 0};
+    order: ${iconPosition === 'right' ? 1 : 0};
     & > svg {
       width: 100%;
     }
@@ -57,7 +57,7 @@ export const Error = styled.p`
   `}
 `
 const wrapperModifiers = {
-error: (theme: DefaultTheme) => css`
+  error: (theme: DefaultTheme) => css`
     ${InputWrapper} {
       border-color: ${theme.colors.red};
     }
@@ -76,7 +76,7 @@ error: (theme: DefaultTheme) => css`
         color: currentColor;
       }
     }
-  `
+  `,
 }
 
 export const Wrapper = styled.div<WrapperProps>`

@@ -11,6 +11,6 @@ export const Default: StoryObj<MenuProps> = (args: any) => <Menu {...args} />
 Default.parameters = {
   layout: 'fullscreen',
   backgrounds: {
-    default: 'won-dark'
-  }
+    default: 'won-dark',
+  },
 }

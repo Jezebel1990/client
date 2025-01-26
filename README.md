@@ -2,14 +2,12 @@
 
 ![Home Page](public/img/home-page.png)
 
-
 Won Games is a game e-commerce developed during Willian Justen's Advanced React course. This application was designed to offer customers the best shopping experience, including features such as:
 
 🔎 Search and Filters: Find games quickly with advanced filters.
 🛒 Shopping Cart: Add and manage your favorite games in the cart.
 💳 Payment and Customer Area: Complete your purchases safely and access your order history.
 In addition, the application has a fully customized CMS (Content Management System), allowing administrators to have full control over the store.
-
 
 ## Technologies Used
 
@@ -34,11 +32,13 @@ git clone https://github.com/Jezebel1990/client.git
 ```
 
 2. Access the project directory:
+
 ```bash
 cd client
 ```
 
 3. Install the dependencies:
+
 ```bash
  npm install
 ```
@@ -53,7 +53,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-
 ## Commands
 
 - `dev`: runs your application on `localhost:3000`
@@ -66,7 +65,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `build-storybook`: create the build version of storybook
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for more information
 
 Made with ♥ by [Jezebel Guedes](https://www.linkedin.com/in/jezebel-guedes/) 👋 Get in touch!
-

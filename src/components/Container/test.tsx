@@ -8,10 +8,13 @@ describe('<Container />', () => {
     const { container } = renderWithTheme(
       <Container>
         <span>Won Games</span>
-      </Container>
+      </Container>,
     )
 
-    expect(container.firstChild).toHaveStyleRule('max-width', theme.grid.container)
+    expect(container.firstChild).toHaveStyleRule(
+      'max-width',
+      theme.grid.container,
+    )
 
     expect(container.firstChild).toMatchSnapshot()
   })

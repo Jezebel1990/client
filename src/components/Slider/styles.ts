@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
- export const Wrapper = styled.section`
+export const Wrapper = styled.section`
   .slick-slider {
     position: relative;
     display: block;
@@ -86,4 +86,4 @@ import styled from 'styled-components'
   .slick-arrow.slick-hidden {
     display: none;
   }
- `
+`

@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 import * as HeadingStyles from 'components/Heading/styles'
 
- export const Wrapper = styled.footer`
+export const Wrapper = styled.footer`
   ${HeadingStyles.Wrapper} {
-    text-transform: uppercase
+    text-transform: uppercase;
   }
- `
+`
 
- export const Content = styled.div`
+export const Content = styled.div`
   ${({ theme }) => css`
     display: grid;
     grid-template-columns: repeat(2, 1fr);

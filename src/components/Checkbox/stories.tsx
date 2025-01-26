@@ -1,21 +1,21 @@
 import { Meta, StoryObj } from '@storybook/react'
- import Checkbox, { CheckboxProps } from '.'
+import Checkbox, { CheckboxProps } from '.'
 
-  export default { 
-    title: 'Form/Checkbox',
-    component: Checkbox,
-    parameters: {
-      layout: 'fullscreen',
-      backgrounds: {
-        default: 'won-dark'
-      }
+export default {
+  title: 'Form/Checkbox',
+  component: Checkbox,
+  parameters: {
+    layout: 'fullscreen',
+    backgrounds: {
+      default: 'won-dark',
     },
-    argTypes: {
-      onCheck: { action: 'checked' }
-    }
-} as Meta;
- export const Default: StoryObj<CheckboxProps> = (args:any) => (
-<>
+  },
+  argTypes: {
+    onCheck: { action: 'checked' },
+  },
+} as Meta
+export const Default: StoryObj<CheckboxProps> = (args: any) => (
+  <>
     <div style={{ padding: 10 }}>
       <Checkbox
         name="category"
@@ -42,5 +42,5 @@ import { Meta, StoryObj } from '@storybook/react'
       />
     </div>
   </>
- )
- Default.args={}
+)
+Default.args = {}

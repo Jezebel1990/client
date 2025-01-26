@@ -7,33 +7,33 @@ import Checkbox from '.'
 describe('<Checkbox />', () => {
   it('should render with label', () => {
     const { container } = renderWithTheme(
-      <Checkbox label="checkbox label" labelFor="check" />
-    );
+      <Checkbox label="checkbox label" labelFor="check" />,
+    )
 
     expect(screen.getByRole('checkbox')).toBeInTheDocument()
     expect(screen.getByLabelText(/checkbox label/i)).toBeInTheDocument()
     expect(screen.getByText(/checkbox label/i)).toHaveAttribute('for', 'check')
     expect(container.firstChild).toMatchSnapshot()
-  });
+  })
 
   it('should render without label', () => {
-    renderWithTheme(<Checkbox />);
-    expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument();
-  });
+    renderWithTheme(<Checkbox />)
+    expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument()
+  })
 
   it('should render with black label', () => {
     renderWithTheme(
-      <Checkbox label="checkbox label" labelFor="check" labelColor="black" />
-    );
+      <Checkbox label="checkbox label" labelFor="check" labelColor="black" />,
+    )
     expect(screen.getByText(/checkbox label/i)).toHaveStyle({
-      color: theme.colors.black
-    });
-  });
+      color: theme.colors.black,
+    })
+  })
 
   it('should dispatch onCheck when status changes', async () => {
     const onCheck = jest.fn()
     renderWithTheme(<Checkbox label="Checkbox" onCheck={onCheck} />)
-    
+
     expect(onCheck).not.toHaveBeenCalled()
 
     await userEvent.click(screen.getByRole('checkbox'))
@@ -46,7 +46,7 @@ describe('<Checkbox />', () => {
   })
 
   it('should dispatch onCheck when status changes', async () => {
-    const onCheck = jest.fn();
+    const onCheck = jest.fn()
     renderWithTheme(<Checkbox label="Checkbox" onCheck={onCheck} isChecked />)
 
     await userEvent.click(screen.getByRole('checkbox'))
@@ -60,7 +60,7 @@ describe('<Checkbox />', () => {
 
   it('should be accessible with tab', async () => {
     renderWithTheme(<Checkbox label="Checkbox" labelFor="check" />)
-    
+
     const checkbox = screen.getByRole('checkbox')
 
     expect(document.body).toHaveFocus()

@@ -1,27 +1,26 @@
 import { Meta, StoryObj } from '@storybook/react'
-import MediaMatch from '.' 
+import MediaMatch from '.'
 
-export default { 
-    title: 'MediaMatch',
-     component: MediaMatch
+export default {
+  title: 'MediaMatch',
+  component: MediaMatch,
 } as Meta
 
- export const Desktop: StoryObj = () => (
- <MediaMatch greaterThan='medium'>Only on Desktop</MediaMatch>
- )
+export const Desktop: StoryObj = () => (
+  <MediaMatch greaterThan="medium">Only on Desktop</MediaMatch>
+)
 export const Mobile: StoryObj = () => (
-    <MediaMatch lessThan='medium'>Only on Mobile</MediaMatch>
+  <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
 )
 
 Mobile.parameters = {
-    viewport: {
-        defaultViewport: 'mobile1'
-    }
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
 }
 
-
 Desktop.parameters = {
-    viewport: {
-        defaultViewport: 'desktop'
-    }
+  viewport: {
+    defaultViewport: 'desktop',
+  },
 }

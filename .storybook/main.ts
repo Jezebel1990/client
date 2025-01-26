@@ -3,14 +3,14 @@ const config = {
   addons: ['@storybook/addon-essentials'],
   framework: {
     name: '@storybook/nextjs',
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: true
+    autodocs: true,
   },
   webpackFinal: (config) => {
     config.resolve.modules.push(`${process.cwd()}/src`)
     return config
-  }
+  },
 }
 export default config

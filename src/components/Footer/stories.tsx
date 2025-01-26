@@ -9,7 +9,7 @@ const meta: Meta<typeof Footer> = {
       default: 'won-gray',
     },
   },
-};
+}
 
 export default meta
 

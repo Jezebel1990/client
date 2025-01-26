@@ -5,24 +5,24 @@ import Button from 'components/Button'
 import * as S from './styles'
 import { FormWrapper, FormLink } from 'components/Form'
 
- const FormSignIn = () => (
-<FormWrapper>
-  <form>
-    <TextField
-      name="email"
-      placeholder="Email"
-      type="email"
-      icon={<Email />}
-    />
+const FormSignIn = () => (
+  <FormWrapper>
+    <form>
+      <TextField
+        name="email"
+        placeholder="Email"
+        type="email"
+        icon={<Email />}
+      />
 
-    <TextField 
-     name="password"
-     placeholder="Password"
-     type="password"
-     icon={<Lock />}
-    />
+      <TextField
+        name="password"
+        placeholder="Password"
+        type="password"
+        icon={<Lock />}
+      />
 
-<S.ForgotPassword href="#">Forgot your password?</S.ForgotPassword>
+      <S.ForgotPassword href="#">Forgot your password?</S.ForgotPassword>
       <Button size="large" fullWidth>
         Sign in now
       </Button>
@@ -32,7 +32,7 @@ import { FormWrapper, FormLink } from 'components/Form'
           <a>Sign up</a>
         </Link>
       </FormLink>
-  </form>
-</FormWrapper>
+    </form>
+  </FormWrapper>
 )
- export default FormSignIn
+export default FormSignIn

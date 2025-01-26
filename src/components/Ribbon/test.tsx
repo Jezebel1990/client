@@ -9,7 +9,7 @@ describe('<Ribbon />', () => {
 
     expect(screen.getByText(/Best Seller/i)).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()
-  });
+  })
 
   it('should render with the primary color', () => {
     renderWithTheme(<Ribbon>Best Seller</Ribbon>)
@@ -19,7 +19,7 @@ describe('<Ribbon />', () => {
   })
 
   it('should render with the color secondary', () => {
-    renderWithTheme(<Ribbon color="secondary">Best Seller</Ribbon>);
+    renderWithTheme(<Ribbon color="secondary">Best Seller</Ribbon>)
     expect(screen.getByText(/Best Seller/i)).toHaveStyle({
       'background-color': '#6d47cc',
     })

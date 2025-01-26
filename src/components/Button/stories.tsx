@@ -7,31 +7,31 @@ export default {
   component: Button,
   argTypes: {
     children: {
-      control: 'text', 
+      control: 'text',
     },
     size: {
       control: {
         type: 'select',
-        options: ['small', 'medium', 'large'], 
+        options: ['small', 'medium', 'large'],
       },
     },
     minimal: {
-      control: 'boolean', 
+      control: 'boolean',
     },
     icon: {
-      control: false, 
+      control: false,
     },
     as: {
-      control: false, 
+      control: false,
     },
   },
-} as Meta<ButtonProps>;
+} as Meta<ButtonProps>
 
 export const Default: StoryObj<ButtonProps> = {
   args: {
     children: 'Buy now',
   },
-};
+}
 
 export const withIcon: StoryObj<ButtonProps> = {
   args: {

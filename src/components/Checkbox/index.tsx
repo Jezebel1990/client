@@ -10,15 +10,15 @@ export type CheckboxProps = {
   value?: string | ReadonlyArray<string> | number
 } & InputHTMLAttributes<HTMLInputElement>
 
- const Checkbox = ({
-  onCheck, 
+const Checkbox = ({
+  onCheck,
   isChecked = false,
   label,
   labelFor = '',
   labelColor = 'white',
   value,
   ...props
- }: CheckboxProps) => {
+}: CheckboxProps) => {
   // controlled component (state)
   const [checked, setChecked] = useState(isChecked)
   const onChange = () => {
@@ -45,4 +45,4 @@ export type CheckboxProps = {
   )
 }
 
- export default Checkbox
+export default Checkbox

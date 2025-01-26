@@ -13,7 +13,7 @@ export default {
       default: 'won-dark',
     },
   },
-} as Meta<GameCardSliderProps>;
+} as Meta<GameCardSliderProps>
 
 export const Default: StoryObj<GameCardSliderProps> = {
   render: (args) => (

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 import { RadioProps } from '.'
 export const Wrapper = styled.div`
   display: flex;

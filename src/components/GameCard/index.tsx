@@ -18,7 +18,7 @@ export type GameCardProps = {
   onFav?: () => void
 }
 
- const GameCard = ({ 
+const GameCard = ({
   title,
   developer,
   img,
@@ -28,16 +28,22 @@ export type GameCardProps = {
   ribbon,
   ribbonColor = 'primary',
   ribbonSize = 'small',
-  onFav
-  }: GameCardProps) => (
-<S.Wrapper>
-{!!ribbon && (
+  onFav,
+}: GameCardProps) => (
+  <S.Wrapper>
+    {!!ribbon && (
       <Ribbon color={ribbonColor} size={ribbonSize}>
         {ribbon}
       </Ribbon>
     )}
-   <S.ImageBox>
-      <Image src={img} alt={title} layout="responsive" width={100} height={100} />
+    <S.ImageBox>
+      <Image
+        src={img}
+        alt={title}
+        layout="responsive"
+        width={100}
+        height={100}
+      />
     </S.ImageBox>
     <S.Content>
       <S.Info>
@@ -45,11 +51,11 @@ export type GameCardProps = {
         <S.Developer>{developer}</S.Developer>
       </S.Info>
       <S.FavButton onClick={onFav} role="button">
-      {favorite ? (
-        <Star aria-label="Remove from Wishlist" />
-      ) : (
-        <StarBorder aria-label="Add to Wishlist" />
-      )}
+        {favorite ? (
+          <Star aria-label="Remove from Wishlist" />
+        ) : (
+          <StarBorder aria-label="Add to Wishlist" />
+        )}
       </S.FavButton>
       <S.BuyBox>
         {!!promotionalPrice && <S.Price isPromotional>{price}</S.Price>}
@@ -57,7 +63,7 @@ export type GameCardProps = {
         <Button icon={<AddShoppingCart />} size="small" />
       </S.BuyBox>
     </S.Content>
-</S.Wrapper>
+  </S.Wrapper>
 )
 
- export default GameCard
+export default GameCard

@@ -45,7 +45,7 @@ export const Wrapper = styled.section<WrapperProps>`
     .slick-prev {
       left: -${theme.spacings.xxlarge};
     }
-    
+
     .slick-next {
       right: -${theme.spacings.xxlarge};
     }

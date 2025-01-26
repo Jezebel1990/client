@@ -8,7 +8,6 @@ export default function Index(props: HomeTemplateProps) {
 }
 
 export function getServerSideProps() {
-
   return {
     props: {
       banners: bannersMock,
@@ -19,7 +18,7 @@ export function getServerSideProps() {
       upcommingHighligth: highlightMock,
       upcommingMoreGames: gamesMock,
       freeGames: gamesMock,
-      freeHighligth: highlightMock
-}
-}
+      freeHighligth: highlightMock,
+    },
+  }
 }

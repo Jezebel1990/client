@@ -2,7 +2,6 @@ import Banner, { BannerProps } from 'components/Banner'
 import Slider, { SliderSettings } from 'components/Slider'
 import * as S from './styles'
 
-
 export type BannerSliderProps = {
   items: BannerProps[]
 }
@@ -18,20 +17,20 @@ const settings: SliderSettings = {
       breakpoint: 1170,
       settings: {
         vertical: false,
-        verticalSwiping: false
-      }
-    }
-  ]
+        verticalSwiping: false,
+      },
+    },
+  ],
 }
 
- const BannerSlider = ({ items }: BannerSliderProps) => (
-<S.Wrapper>
-<Slider settings={settings}>
+const BannerSlider = ({ items }: BannerSliderProps) => (
+  <S.Wrapper>
+    <Slider settings={settings}>
       {items.map((item) => (
         <Banner key={item.title} {...item} />
       ))}
     </Slider>
-</S.Wrapper>
+  </S.Wrapper>
 )
 
- export default BannerSlider
+export default BannerSlider

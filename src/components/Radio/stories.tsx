@@ -1,22 +1,22 @@
-import { Meta, StoryObj } from '@storybook/react';
- import Radio, { RadioProps } from '.';
+import { Meta, StoryObj } from '@storybook/react'
+import Radio, { RadioProps } from '.'
 
-  export default {
-     title: 'Form/Radio', 
-     component: Radio,
-     parameters: {
-        layout: 'fullscreen',
-        backgrounds: {
-          default: 'won-dark'
-        }
-      },
-      argTypes: {
-        onCheck: { action: 'checked' }
-      }
-} as Meta;
+export default {
+  title: 'Form/Radio',
+  component: Radio,
+  parameters: {
+    layout: 'fullscreen',
+    backgrounds: {
+      default: 'won-dark',
+    },
+  },
+  argTypes: {
+    onCheck: { action: 'checked' },
+  },
+} as Meta
 
- export const Default: StoryObj<RadioProps> = (args: any) => (
-    <>
+export const Default: StoryObj<RadioProps> = (args: any) => (
+  <>
     <div style={{ padding: 10 }}>
       <Radio
         label="primeiro"
@@ -48,7 +48,7 @@ import { Meta, StoryObj } from '@storybook/react';
         {...args}
       />
     </div>
-    </>
- )
+  </>
+)
 
- Default.args={}
+Default.args = {}

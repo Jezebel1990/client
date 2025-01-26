@@ -9,18 +9,18 @@ export const parameters = {
     values: [
       {
         name: 'won-light',
-        value: theme.colors.white
+        value: theme.colors.white,
       },
       {
         name: 'won-dark',
-        value: theme.colors.mainBg
+        value: theme.colors.mainBg,
       },
       {
         name: 'won-gray',
-        value: theme.colors.gray
-      }
-    ]
-  }
+        value: theme.colors.gray,
+      },
+    ],
+  },
 }
 
 export const decorators = [
@@ -29,5 +29,5 @@ export const decorators = [
       <GlobalStyles removeBg />
       <Story />
     </ThemeProvider>
-  )
+  ),
 ]

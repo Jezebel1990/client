@@ -31,36 +31,36 @@ const Home = ({
   upcommingHighligth,
   upcommingMoreGames,
   freeGames,
-  freeHighligth
+  freeHighligth,
 }: HomeTemplateProps) => (
   <section>
     <Container>
       <Menu />
       <S.SectionBanner>
-      <BannerSlider items={banners} />
-    </S.SectionBanner>
+        <BannerSlider items={banners} />
+      </S.SectionBanner>
     </Container>
 
     <S.SectionNews>
-    <Container>
-      <Heading lineLeft lineColor="secondary">
-        News
-      </Heading>
+      <Container>
+        <Heading lineLeft lineColor="secondary">
+          News
+        </Heading>
 
-      <GameCardSlider items={newGames} color="white" />
+        <GameCardSlider items={newGames} color="white" />
       </Container>
     </S.SectionNews>
 
     <Container>
-    <S.SectionMostPopular>
-    <Heading lineLeft lineColor="secondary">
-      Most Popular
-    </Heading>
-    <Highlight {...mostPopularHighlight} />
-    <GameCardSlider items={mostPopularGames} />
-  </S.SectionMostPopular>
+      <S.SectionMostPopular>
+        <Heading lineLeft lineColor="secondary">
+          Most Popular
+        </Heading>
+        <Highlight {...mostPopularHighlight} />
+        <GameCardSlider items={mostPopularGames} />
+      </S.SectionMostPopular>
 
-  <S.SectionUpcoming>
+      <S.SectionUpcoming>
         <Heading lineLeft lineColor="secondary">
           Upcomming
         </Heading>
@@ -70,12 +70,12 @@ const Home = ({
       </S.SectionUpcoming>
 
       <S.SectionFreeGames>
-      <Heading lineLeft lineColor="secondary">
-        Free games
-      </Heading>
-      <Highlight {...freeHighligth} />
-      <GameCardSlider items={freeGames} />
-    </S.SectionFreeGames>
+        <Heading lineLeft lineColor="secondary">
+          Free games
+        </Heading>
+        <Highlight {...freeHighligth} />
+        <GameCardSlider items={freeGames} />
+      </S.SectionFreeGames>
     </Container>
 
     <S.SectionFooter>

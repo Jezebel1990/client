@@ -82,5 +82,3 @@ export const SectionFooter = styled.section`
     `}
   `}
 `
-
-

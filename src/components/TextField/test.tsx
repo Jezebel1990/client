@@ -1,64 +1,64 @@
-import { screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { Email } from '@styled-icons/material-outlined';
-import { renderWithTheme } from 'utils/tests/helpers';
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { Email } from '@styled-icons/material-outlined'
+import { renderWithTheme } from 'utils/tests/helpers'
 
-import TextField from '.';
+import TextField from '.'
 
 describe('<TextField />', () => {
   it('Renders with Label', () => {
-    renderWithTheme(<TextField label="Label" labelFor="Field" id="Field" />);
-    expect(screen.getByLabelText('Label')).toBeInTheDocument();
-  });
+    renderWithTheme(<TextField label="Label" labelFor="Field" id="Field" />)
+    expect(screen.getByLabelText('Label')).toBeInTheDocument()
+  })
 
   it('Renders without Label', () => {
-    renderWithTheme(<TextField />);
-    expect(screen.queryByLabelText('Label')).not.toBeInTheDocument();
-  });
+    renderWithTheme(<TextField />)
+    expect(screen.queryByLabelText('Label')).not.toBeInTheDocument()
+  })
 
   it('Renders with placeholder', () => {
-    renderWithTheme(<TextField placeholder="hey you" />);
-    expect(screen.getByPlaceholderText('hey you')).toBeInTheDocument();
-  });
+    renderWithTheme(<TextField placeholder="hey you" />)
+    expect(screen.getByPlaceholderText('hey you')).toBeInTheDocument()
+  })
 
   it('Renders with Icon', () => {
-    renderWithTheme(<TextField icon={<Email data-testid="icon" />} />);
-    expect(screen.getByTestId('icon')).toBeInTheDocument();
-  });
+    renderWithTheme(<TextField icon={<Email data-testid="icon" />} />)
+    expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
 
   it('Renders with Icon on the right side', () => {
     renderWithTheme(
-      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />
-    );
-    expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 });
-  });
+      <TextField icon={<Email data-testid="icon" />} iconPosition="right" />,
+    )
+    expect(screen.getByTestId('icon').parentElement).toHaveStyle({ order: 1 })
+  })
 
   it('Changes its value when typing', async () => {
-    const onInput = jest.fn();
+    const onInput = jest.fn()
     renderWithTheme(
       <TextField
         onInput={onInput}
         label="TextField"
         labelFor="TextField"
         id="TextField"
-      />
-    );
+      />,
+    )
 
-    const input = screen.getByRole('textbox');
-    const text = 'This is my new text';
+    const input = screen.getByRole('textbox')
+    const text = 'This is my new text'
 
-    await userEvent.type(input, text);
+    await userEvent.type(input, text)
 
     await waitFor(() => {
-      expect(input).toHaveValue(text);
-      expect(onInput).toHaveBeenCalledTimes(text.length);
-    });
+      expect(input).toHaveValue(text)
+      expect(onInput).toHaveBeenCalledTimes(text.length)
+    })
 
-    expect(onInput).toHaveBeenLastCalledWith(text);
-  });
+    expect(onInput).toHaveBeenLastCalledWith(text)
+  })
 
   it('Does not change its value when disabled', async () => {
-    const onInput = jest.fn();
+    const onInput = jest.fn()
     renderWithTheme(
       <TextField
         onInput={onInput}
@@ -66,21 +66,21 @@ describe('<TextField />', () => {
         labelFor="TextField"
         id="TextField"
         disabled
-      />
-    );
+      />,
+    )
 
-    const input = screen.getByRole('textbox');
-    expect(input).toBeDisabled();
+    const input = screen.getByRole('textbox')
+    expect(input).toBeDisabled()
 
-    const text = 'This is my new text';
-    await userEvent.type(input, text);
+    const text = 'This is my new text'
+    await userEvent.type(input, text)
 
     await waitFor(() => {
-      expect(input).not.toHaveValue(text);
-    });
+      expect(input).not.toHaveValue(text)
+    })
 
-    expect(onInput).not.toHaveBeenCalled();
-  });
+    expect(onInput).not.toHaveBeenCalled()
+  })
 
   it('Renders with error', () => {
     const { container } = renderWithTheme(
@@ -89,34 +89,39 @@ describe('<TextField />', () => {
         label="TextField"
         labelFor="TextField"
         error="Error message"
-      />
-    );
+      />,
+    )
 
-    expect(screen.getByText('Error message')).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot();
-  });
+    expect(screen.getByText('Error message')).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
 
   it('Is accessible by tab', async () => {
     renderWithTheme(
-      <TextField label="TextField" labelFor="TextField" id="TextField" />
-    );
+      <TextField label="TextField" labelFor="TextField" id="TextField" />,
+    )
 
-    const input = screen.getByLabelText('TextField');
-    expect(document.body).toHaveFocus();
+    const input = screen.getByLabelText('TextField')
+    expect(document.body).toHaveFocus()
 
-    await userEvent.tab();
-    expect(input).toHaveFocus();
-  });
+    await userEvent.tab()
+    expect(input).toHaveFocus()
+  })
 
   it('Is not accessible by tab when disabled', async () => {
     renderWithTheme(
-      <TextField label="TextField" labelFor="TextField" id="TextField" disabled />
-    );
+      <TextField
+        label="TextField"
+        labelFor="TextField"
+        id="TextField"
+        disabled
+      />,
+    )
 
-    const input = screen.getByLabelText('TextField');
-    expect(document.body).toHaveFocus();
+    const input = screen.getByLabelText('TextField')
+    expect(document.body).toHaveFocus()
 
-    await userEvent.tab();
-    expect(input).not.toHaveFocus();
-  });
-});
+    await userEvent.tab()
+    expect(input).not.toHaveFocus()
+  })
+})

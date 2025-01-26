@@ -3,10 +3,10 @@ import media from 'styled-media-query'
 
 import * as RibbonStyles from 'components/Ribbon/styles'
 
- export const Wrapper = styled.main`
- position: relative;
+export const Wrapper = styled.main`
+  position: relative;
 
- ${media.lessThan('large')`
+  ${media.lessThan('large')`
     ${RibbonStyles.Wrapper} {
       right: 0;
       &::before {
@@ -15,17 +15,17 @@ import * as RibbonStyles from 'components/Ribbon/styles'
     }
   `}
 
- ${media.greaterThan('medium')`
+  ${media.greaterThan('medium')`
     box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
     `}
- `
+`
 
- type ImageProps = {
-    src: string
- }
+type ImageProps = {
+  src: string
+}
 
- export const Image = styled.div<ImageProps>`
- ${({ theme, src }) => css`
+export const Image = styled.div<ImageProps>`
+  ${({ theme, src }) => css`
     width: 100%;
     height: 23rem;
     background-color: ${theme.colors.lightGray};
@@ -35,12 +35,11 @@ import * as RibbonStyles from 'components/Ribbon/styles'
 
     ${media.greaterThan('medium')`
      height: 58rem;
-    `
-    }
- `}
- `
+    `}
+  `}
+`
 
- export const Caption = styled.div`
+export const Caption = styled.div`
   ${({ theme }) => css`
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -53,10 +52,10 @@ import * as RibbonStyles from 'components/Ribbon/styles'
       left: 0;
     `}
   `}
- `
+`
 
- export const Title = styled.h2`
-   ${({ theme }) => css`
+export const Title = styled.h2`
+  ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.white};
@@ -64,22 +63,22 @@ import * as RibbonStyles from 'components/Ribbon/styles'
       font-size: ${theme.font.sizes.xxlarge};
     `}
   `}
- `
+`
 
- export const Subtitle = styled.h3`
- ${({ theme }) => css`
+export const Subtitle = styled.h3`
+  ${({ theme }) => css`
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.normal};
     margin-bottom: ${theme.spacings.xsmall};
 
     strong {
-     color: ${theme.colors.primary};
-     font-weight: ${theme.font.bold};
+      color: ${theme.colors.primary};
+      font-weight: ${theme.font.bold};
     }
 
     ${media.greaterThan('medium')`
      font-size: ${theme.font.sizes.large};
     `}
- `}
- `
+  `}
+`

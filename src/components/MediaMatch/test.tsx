@@ -17,7 +17,7 @@ describe('<MediaMatch />', () => {
         <MediaMatch lessThan="medium">
           <h1 data-testid="mobile">Mobile</h1>
         </MediaMatch>
-      </>
+      </>,
     )
     desktopHeading = screen.getByTestId('desktop')
     mobileHeading = screen.getByTestId('mobile')
