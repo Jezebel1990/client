@@ -7,11 +7,11 @@ const config: Config = {
   collectCoverageFrom: [
     'src/**/*.ts(x)?',
     '!src/app/**',
-    '!src/pages/**',
+    '!src/pages/**/*.ts',
     '!src/lib/registry.tsx',
     '!src/types/**',
     '!src/**/stories.tsx',
-    '!src/styles/**',
+    '!src/styles/**/*.ts',
   ],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',

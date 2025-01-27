@@ -41,7 +41,7 @@ const Home = ({
     </Container>
 
     <S.SectionNews>
-    <Showcase title="News" games={newGames} />
+      <Showcase title="News" games={newGames} />
     </S.SectionNews>
 
     <Showcase
@@ -50,7 +50,7 @@ const Home = ({
       games={mostPopularGames}
     />
 
-<S.SectionUpcoming>
+    <S.SectionUpcoming>
       <Showcase title="Upcoming" games={upcommingGames} />
       <Showcase highlight={upcommingHighlight} games={upcommingMoreGames} />
     </S.SectionUpcoming>
