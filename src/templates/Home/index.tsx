@@ -10,7 +10,6 @@ import BannerSlider from '../../components/BannerSlider'
 import Showcase from 'components/Showcase'
 import * as S from './styles'
 
-
 export type HomeTemplateProps = {
   banners: BannerProps[]
   newGames: GameCardProps[]

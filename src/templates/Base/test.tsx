@@ -8,7 +8,7 @@ jest.mock('components/Menu', () => {
     __esModule: true,
     default: function Mock() {
       return <div data-testid="Mock Menu"></div>
-    }
+    },
   }
 })
 jest.mock('components/Footer', () => {
@@ -16,7 +16,7 @@ jest.mock('components/Footer', () => {
     __esModule: true,
     default: function Mock() {
       return <div data-testid="Mock Footer"></div>
-    }
+    },
   }
 })
 describe('<Base />', () => {
@@ -24,12 +24,12 @@ describe('<Base />', () => {
     renderWithTheme(
       <Base>
         <h1>Heading</h1>
-      </Base>
+      </Base>,
     )
     expect(screen.getByTestId('Mock Menu')).toBeInTheDocument()
     expect(screen.getByTestId('Mock Footer')).toBeInTheDocument()
     expect(
-      screen.getByRole('heading', { name: /heading/i })
+      screen.getByRole('heading', { name: /heading/i }),
     ).toBeInTheDocument()
   })
 })
