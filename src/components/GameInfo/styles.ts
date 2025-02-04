@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.small};
 
     ${RibbonStyles.Wrapper} {
-        right: -1rem;
-        &:before {
-          border-right-width: 1rem;
-        }
+      right: -1rem;
+      &:before {
+        border-right-width: 1rem;
       }
-      ${media.greaterThan('medium')`
+    }
+    ${media.greaterThan('medium')`
         ${RibbonStyles.Wrapper} {
           right: ${theme.spacings.small};
           top: ${theme.spacings.small};
@@ -25,35 +25,34 @@ export const Wrapper = styled.div`
           }
         }
       `}
-    `}
-  `
-  
-  export const Description = styled.p`
-    ${({ theme }) => css`
-      font-size: ${theme.font.sizes.small};
-      color: ${theme.colors.gray};
-      margin-bottom: ${theme.spacings.small};
-      ${media.greaterThan('medium')`
+  `}
+`
+
+export const Description = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.gray};
+    margin-bottom: ${theme.spacings.small};
+    ${media.greaterThan('medium')`
         max-width: 77rem;
       `}
-    `}
-  `
-  export const ButtonsWrapper = styled.div`
-    ${({ theme }) => css`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      > button {
-        width: 100%;
-        margin-bottom: ${theme.spacings.xxsmall};
-      }
-      ${media.greaterThan('medium')`
+  `}
+`
+export const ButtonsWrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > button {
+      width: 100%;
+      margin-bottom: ${theme.spacings.xxsmall};
+    }
+    ${media.greaterThan('medium')`
         flex-direction: row-reverse;
         > button {
           width: initial;
           margin-bottom: 0;
         }
       `}
-    `}
-  `
-
+  `}
+`

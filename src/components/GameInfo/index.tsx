@@ -1,6 +1,4 @@
-import {
-  AddShoppingCart
-} from '@styled-icons/material-outlined'
+import { AddShoppingCart } from '@styled-icons/material-outlined'
 import { StarBorder } from '@styled-icons/material-rounded'
 import Button from 'components/Button'
 import Heading from 'components/Heading'
@@ -13,10 +11,9 @@ export type GameInfoProps = {
   description: string
   price: string
 }
- const GameInfo = ({ title, description, price }: GameInfoProps) => (
-
-<S.Wrapper>
-<Heading color="black" lineBottom>
+const GameInfo = ({ title, description, price }: GameInfoProps) => (
+  <S.Wrapper>
+    <Heading color="black" lineBottom>
       {title}
     </Heading>
     <Ribbon color="primary">{`$${price}`}</Ribbon>
@@ -29,6 +26,6 @@ export type GameInfoProps = {
         Wishlist
       </Button>
     </S.ButtonsWrapper>
-</S.Wrapper>
-) 
+  </S.Wrapper>
+)
 export default GameInfo
