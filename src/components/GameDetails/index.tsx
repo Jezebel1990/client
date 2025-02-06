@@ -20,12 +20,12 @@ const GameDetails = ({
   releaseDate,
   platforms,
   rating = 'BR0',
-  genres = []
+  genres = [],
 }: GameDetailsProps) => {
   const platformIcons = {
     linux: <Linux title="Linux" size={18} />,
     mac: <Apple title="Mac" size={18} />,
-    windows: <Windows title="Windows" size={18} />
+    windows: <Windows title="Windows" size={18} />,
   }
 
   return (
@@ -45,10 +45,10 @@ const GameDetails = ({
         <S.Block>
           <S.Label>Release Date</S.Label>
           <S.Description>
-          {new Intl.DateTimeFormat('en-US', {
+            {new Intl.DateTimeFormat('en-US', {
               day: 'numeric',
               month: 'short',
-              year: 'numeric'
+              year: 'numeric',
             }).format(new Date(releaseDate))}
           </S.Description>
         </S.Block>
@@ -76,9 +76,7 @@ const GameDetails = ({
 
         <S.Block>
           <S.Label>Genres</S.Label>
-          <S.Description>
-          {genres.join(' / ')}
-          </S.Description>
+          <S.Description>{genres.join(' / ')}</S.Description>
         </S.Block>
       </S.Content>
     </S.Wrapper>

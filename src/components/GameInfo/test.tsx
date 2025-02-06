@@ -12,12 +12,12 @@ describe('<GameInfo />', () => {
   it('should render game informations', () => {
     const { container } = renderWithTheme(<GameInfo {...props} />)
 
-    screen.debug() 
+    screen.debug()
 
     expect(
-      screen.getByRole('heading', { name: /my game title/i })
+      screen.getByRole('heading', { name: /my game title/i }),
     ).toBeInTheDocument()
-    
+
     expect(screen.getByText(/210,00/)).toBeInTheDocument()
     expect(screen.getByText(/game description/i)).toBeInTheDocument()
 

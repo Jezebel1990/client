@@ -2,32 +2,32 @@ import { Meta, StoryObj } from '@storybook/react'
 import GameDetails, { GameDetailsProps } from '.'
 import mockGame from './mock'
 
-export default { 
-  title: 'Game/GameDetails', 
+export default {
+  title: 'Game/GameDetails',
   component: GameDetails,
   parameters: {
     backgrounds: {
-      default: 'won-dark'
-    }
+      default: 'won-dark',
+    },
   },
   args: mockGame,
   argTypes: {
     releaseDate: {
-      control: 'date'
+      control: 'date',
     },
     platforms: {
       control: {
-        type: 'inline-check', 
+        type: 'inline-check',
       },
-      options: ['windows', 'linux', 'mac']
+      options: ['windows', 'linux', 'mac'],
     },
     genres: {
       control: {
-        type: 'inline-check', 
+        type: 'inline-check',
       },
-      options: ['Role-playing', 'Narrative']
-    }
-  }
+      options: ['Role-playing', 'Narrative'],
+    },
+  },
 } as Meta<GameDetailsProps>
 
 export const Default: StoryObj<GameDetailsProps> = {
@@ -36,6 +36,5 @@ export const Default: StoryObj<GameDetailsProps> = {
       <GameDetails {...args} />
     </div>
   ),
-  args: {}
+  args: {},
 }
-
