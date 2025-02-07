@@ -7,15 +7,14 @@ export type TextContentProps = {
   content: string
 }
 
-
- const TextContent = ({ title, content }: TextContentProps) => (
-<S.Wrapper>
- {!!title && (
+const TextContent = ({ title, content }: TextContentProps) => (
+  <S.Wrapper>
+    {!!title && (
       <Heading lineLeft lineColor="secondary">
         {title}
       </Heading>
     )}
     <div dangerouslySetInnerHTML={{ __html: content }} />
-</S.Wrapper>
-) 
+  </S.Wrapper>
+)
 export default TextContent

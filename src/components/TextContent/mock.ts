@@ -1,6 +1,6 @@
 export default {
-    title: 'Description',
-    content: `<h1>Heading</h1>
+  title: 'Description',
+  content: `<h1>Heading</h1>
   <h2>Heading</h2>
   <h3>Heading</h3>
   <h4>Heading</h4>
@@ -39,5 +39,5 @@ export default {
     amet consectetur adipisicing elit. Quia praesentium cupiditate tenetur
     quam illum. Fugiat consectetur assumenda in, vitae nemo, eaque quia
     numquam ad perspiciatis doloribus error eveniet quo officia?
-  </p>`
-  }
+  </p>`,
+}
