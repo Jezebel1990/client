@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components' 
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
@@ -48,7 +48,7 @@ const modalModifiers = {
   close: () => css`
     opacity: 0;
     pointer-events: none;
-  `
+  `,
 }
 export const Modal = styled.div<ModalProps>`
   ${({ theme, isOpen }) => css`

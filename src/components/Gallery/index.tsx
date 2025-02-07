@@ -13,7 +13,7 @@ const commonSettings: SliderSettings = {
   lazyLoad: 'ondemand',
   arrows: true,
   nextArrow: <ArrowRight aria-label="next image" />,
-  prevArrow: <ArrowLeft aria-label="previous image" />
+  prevArrow: <ArrowLeft aria-label="previous image" />,
 }
 const settings: SliderSettings = {
   ...commonSettings,
@@ -24,30 +24,30 @@ const settings: SliderSettings = {
       settings: {
         arrows: false,
         slidesToShow: 3.2,
-        draggable: true
-      }
+        draggable: true,
+      },
     },
     {
       breakpoint: 1024,
       settings: {
         arrows: false,
         slidesToShow: 2.2,
-        draggable: true
-      }
+        draggable: true,
+      },
     },
     {
       breakpoint: 768,
       settings: {
         arrows: false,
         slidesToShow: 2.2,
-        draggable: true
-      }
-    }
-  ]
+        draggable: true,
+      },
+    },
+  ],
 }
 const modalSettings: SliderSettings = {
   ...commonSettings,
-  slidesToShow: 1
+  slidesToShow: 1,
 }
 export type GalleryImageProps = {
   src: string
@@ -61,7 +61,7 @@ const Gallery = ({ items }: GalleryProps) => {
   const slider = useRef<SlickSlider>(null)
   const [isOpen, setIsOpen] = useState(false)
 
- useEffect(() => {
+  useEffect(() => {
     const handleKeyUp = ({ key }: KeyboardEvent) => {
       key === 'Escape' && setIsOpen(false)
     }
@@ -69,34 +69,33 @@ const Gallery = ({ items }: GalleryProps) => {
     return () => window.removeEventListener('keyup', handleKeyUp)
   }, [])
 
+  return (
+    <S.Wrapper>
+      <Slider ref={slider} settings={settings}>
+        {items.map((item, index) => (
+          <img
+            role="button"
+            key={`thumb-${index}`}
+            src={item.src}
+            alt={`Thumb - ${item.label}`}
+            onClick={() => {
+              setIsOpen(true)
+              slider.current!.slickGoTo(index, true)
+            }}
+          />
+        ))}
+      </Slider>
 
-return (
-<S.Wrapper>
-<Slider ref={slider} settings={settings}>
-      {items.map((item, index) => (
-        <img
-          role="button"
-          key={`thumb-${index}`}
-          src={item.src}
-          alt={`Thumb - ${item.label}`}
-          onClick={() => {
-            setIsOpen(true)
-            slider.current!.slickGoTo(index, true)
-          }}
-        />
-      ))}
-    </Slider>
-
-    <S.Modal isOpen={isOpen} aria-label="modal" aria-hidden={!isOpen}>
+      <S.Modal isOpen={isOpen} aria-label="modal" aria-hidden={!isOpen}>
         <S.Close
-         role="button"
+          role="button"
           aria-label="close modal"
           onClick={() => setIsOpen(false)}
-      >
-      <Close size={40} />
-      </S.Close>
+        >
+          <Close size={40} />
+        </S.Close>
 
-      <S.Content>
+        <S.Content>
           <Slider ref={slider} settings={modalSettings}>
             {items.map((item, index) => (
               <img key={`gallery-${index}`} src={item.src} alt={item.label} />
@@ -104,7 +103,7 @@ return (
           </Slider>
         </S.Content>
       </S.Modal>
-</S.Wrapper>
-) 
+    </S.Wrapper>
+  )
 }
 export default Gallery
