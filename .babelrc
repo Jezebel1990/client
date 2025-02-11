@@ -5,10 +5,21 @@
       "babel-plugin-styled-components",
       {
         "ssr": true,
-        "displayName": true,
-        "fileName": false,
-        "pure": true
+        "displayName": true
       }
     ]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  }
 }
