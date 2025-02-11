@@ -22,17 +22,19 @@ const FormSignIn = () => (
         icon={<Lock />}
       />
 
-      <S.ForgotPassword href="#">Forgot your password?</S.ForgotPassword>
+      <Link href="#">
+        <S.ForgotPassword as="a">Forgot your password?</S.ForgotPassword>
+      </Link>
+
       <Button size="large" fullWidth>
         Sign in now
       </Button>
       <FormLink>
         Don’t have an account?{' '}
-        <Link href="/sign-up" legacyBehavior>
-          <a>Sign up</a>
-        </Link>
+        <Link href="/sign-up">Sign up</Link>
       </FormLink>
     </form>
   </FormWrapper>
 )
+
 export default FormSignIn

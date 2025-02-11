@@ -12,10 +12,8 @@ const Auth = ({ title, children }: AuthProps) => (
   <S.Wrapper>
     <S.BannerBlock>
       <S.BannerContent>
-        <Link href="/" legacyBehavior>
-          <a>
-            <Logo id="banner" />
-          </a>
+        <Link href="/" passHref>
+          <Logo id="banner" />
         </Link>
 
         <div>
@@ -31,10 +29,8 @@ const Auth = ({ title, children }: AuthProps) => (
 
     <S.Content>
       <S.ContentWrapper>
-        <Link href="/" legacyBehavior>
-          <a>
-            <Logo id="content" color="black" size="large" />
-          </a>
+        <Link href="/" passHref>
+          <Logo id="content" color="black" size="large" />
         </Link>
         <Heading color="black" lineColor="secondary" lineLeft>
           {title}
@@ -44,4 +40,5 @@ const Auth = ({ title, children }: AuthProps) => (
     </S.Content>
   </S.Wrapper>
 )
+
 export default Auth

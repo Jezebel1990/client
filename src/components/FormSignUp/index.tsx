@@ -38,8 +38,8 @@ const FormSignUp = () => (
 
       <FormLink>
         Already have an account?{' '}
-        <Link href="/sign-in" legacyBehavior>
-          <a>Sign in</a>
+        <Link href="/sign-in" passHref>
+          <FormLink as="a">Sign in</FormLink>
         </Link>
       </FormLink>
     </form>

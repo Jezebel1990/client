@@ -1,3 +1,5 @@
 !.storybook
 !.jest
 src/types/styled-components.d.ts
+/src/types/jest-styled-components.d.ts
+/src/components/**/*mock.ts
