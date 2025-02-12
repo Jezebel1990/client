@@ -245,7 +245,11 @@ exports[`<FormSignUp /> should render the form 1`] = `
       <a
         href="/sign-in"
       >
-        Sign in
+        <a
+          class="c8"
+        >
+          Sign in
+        </a>
       </a>
     </div>
   </form>
