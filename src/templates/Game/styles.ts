@@ -46,3 +46,13 @@ export const SectionGallery = styled(Section)`
     display: block;
   `}
 `
+
+export const SectionDescription = styled(Section)`
+  ${({ theme }) => css`
+    .description__copyrights {
+      color: ${theme.colors.lightGray};
+      font-size: ${theme.font.sizes.xsmall};
+      margin-top: ${theme.spacings.medium};
+    }
+  `}
+`
