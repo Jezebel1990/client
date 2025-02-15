@@ -26,13 +26,21 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Logo hideOnMobile={hideOnMobile} />
+        <Link href="/" passHref legacyBehavior>
+          <a>
+            <Logo hideOnMobile={hideOnMobile} />
+          </a>
+        </Link>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Explore</S.MenuLink>
+          <Link href="/" passHref legacyBehavior>
+            <S.MenuLink as="a">Home</S.MenuLink>
+          </Link>
+          <S.MenuLink as="a" href="#">
+            Explore
+          </S.MenuLink>
         </S.MenuNav>
       </MediaMatch>
 
@@ -45,7 +53,7 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
         </S.IconWrapper>
         {!username && (
           <MediaMatch greaterThan="medium">
-            <Link href="/sign-in" passHref>
+            <Link href="/sign-in" passHref legacyBehavior>
               <Button as="a">Sign in</Button>
             </Link>
           </MediaMatch>
@@ -55,27 +63,32 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Explore</S.MenuLink>
+          <Link href="/" passHref legacyBehavior>
+            <S.MenuLink as="a">Home</S.MenuLink>
+          </Link>
+
+          <S.MenuLink as="a" href="#">Explore</S.MenuLink>
 
           {!!username && (
             <>
-              <S.MenuLink href="#">My account</S.MenuLink>
-              <S.MenuLink href="#">Wishlist</S.MenuLink>
+              <S.MenuLink as="a" href="#">My account</S.MenuLink>
+              <S.MenuLink as="a" href="#">Wishlist</S.MenuLink>
             </>
           )}
         </S.MenuNav>
 
         {!username && (
           <S.RegisterBox>
-            <Link href="/sign-in" passHref>
+            <Link href="/sign-in" passHref legacyBehavior>
               <Button fullWidth size="large" as="a">
                 Sign In
               </Button>
             </Link>
             <span>or</span>
-            <Link href="/sign-up" passHref>
-              <S.CreateAccount title="Sign Up">Sign Up</S.CreateAccount>
+            <Link href="/sign-up" passHref legacyBehavior>
+              <S.CreateAccount title="Sign Up" as="a">
+                Sign Up
+              </S.CreateAccount>
             </Link>
           </S.RegisterBox>
         )}
@@ -83,4 +96,5 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
     </S.Wrapper>
   )
 }
+
 export default Menu
