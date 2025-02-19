@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react' 
-import GameItem from '.' 
+import GameItem, { GameItemProps } from '.' 
 
 export default { 
     title: 'GameItem', 
@@ -12,5 +12,13 @@ export default {
 } as Meta 
 
 export const Default: StoryObj<GameItemProps> = (args:any) => <GameItem {...args} />
+
+export const WithPayment: StoryObj<GameItemProps> = (args:any) => (
+  <GameItem {...args} />
+)
+WithPayment.args = {
+  downloadLink: 'https://wongames.com/game/download/21312ndasd'
+}
+
 
 Default.args = {}

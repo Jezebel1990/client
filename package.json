@@ -22,6 +22,7 @@
     "@babel/preset-react": "^7.26.3",
     "@babel/runtime": "^7.26.0",
     "@netlify/plugin-nextjs": "^5.9.3",
+    "@styled-icons/boxicons-solid": "^10.47.0",
     "@styled-icons/fa-brands": "^10.47.0",
     "eslint-plugin-eslint-plugin": "^6.4.0",
     "graceful-fs": "^4.2.11",
