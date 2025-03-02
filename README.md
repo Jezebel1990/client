@@ -1,8 +1,11 @@
 # 🎮 Won Games 🎮
+> Won Games is a game e-commerce developed during Willian Justen's Advanced React course. 
 
+![Sign in](public/img/sign-in.png)
 ![Home Page](public/img/home-page.png)
+![Game Page](public/img/game.png)
 
-Won Games is a game e-commerce developed during Willian Justen's Advanced React course. This application was designed to offer customers the best shopping experience, including features such as:
+This application was designed to offer customers the best shopping experience, including features such as:
 
 🔎 Search and Filters: Find games quickly with advanced filters.
 🛒 Shopping Cart: Add and manage your favorite games in the cart.
