@@ -59,6 +59,10 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
         background-color: ${theme.colors.mainBg};
       `}
     }
+
+    a {
+      text-decoration: none !important;
+    }
   `}
 `
 

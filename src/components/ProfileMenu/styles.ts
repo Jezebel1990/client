@@ -41,10 +41,12 @@ export const Link = styled.a<LinkProps>`
     align-items: center;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
     transition: background, color, ${theme.transition.default};
+    
 
     &:hover {
       background: ${theme.colors.primary};
       color: ${theme.colors.white};
+      
     }
 
     > span {
