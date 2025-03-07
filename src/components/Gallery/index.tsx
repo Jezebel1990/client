@@ -4,7 +4,7 @@ import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/A
 import { Close } from '@styled-icons/material-outlined/Close'
 import SlickSlider from 'react-slick'
 
-import Slider, { SliderSettings } from 'components/Slider'
+import Slider, { SliderSettings } from '@/components/Slider'
 
 import * as S from './styles'
 

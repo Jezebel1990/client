@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-import * as HeadingStyles from 'components/Heading/styles'
+import * as HeadingStyles from '@/components/Heading/styles'
 
 export const Wrapper = styled.footer`
   ${HeadingStyles.Wrapper} {

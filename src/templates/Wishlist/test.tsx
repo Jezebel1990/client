@@ -1,11 +1,11 @@
 import 'match-media-mock'
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 
 import Wishlist from '.'
 
-import gamesMock from 'components/GameCardSlider/mock'
-import highlightMock from 'components/Highlight/mock'
+import gamesMock from '@/components/GameCardSlider/mock'
+import highlightMock from '@/components/Highlight/mock'
 const props = {
   games: gamesMock,
   recommendedHighlight: highlightMock,

@@ -13,13 +13,13 @@ exports[`<ProfileMenu /> should render the menu 1`] = `
 }
 
 .c1 {
-  background: #FAFAFA;
-  color: #030517;
   text-decoration: none;
   display: flex;
   align-items: center;
   padding: 1.6rem 2.4rem;
   transition: background,color,0.3s ease-in-out;
+  background: #FAFAFA;
+  color: #030517;
 }
 
 .c1:hover {
@@ -61,6 +61,7 @@ exports[`<ProfileMenu /> should render the menu 1`] = `
   >
     <a
       class="c1"
+      title="My profile"
     >
       <svg
         aria-hidden="true"
@@ -89,6 +90,7 @@ exports[`<ProfileMenu /> should render the menu 1`] = `
   >
     <a
       class="c1"
+      title="My cards"
     >
       <svg
         aria-hidden="true"
@@ -114,6 +116,7 @@ exports[`<ProfileMenu /> should render the menu 1`] = `
   >
     <a
       class="c1"
+      title="My orders"
     >
       <svg
         aria-hidden="true"
@@ -139,6 +142,7 @@ exports[`<ProfileMenu /> should render the menu 1`] = `
   >
     <a
       class="c1"
+      title="Sign out"
     >
       <svg
         aria-hidden="true"

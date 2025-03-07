@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 import GameItem from '.'
 const props = {
   img: 'https://i.imgur.com/AcEXOT2.png',

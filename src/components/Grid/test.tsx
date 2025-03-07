@@ -1,4 +1,4 @@
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 import { Grid } from '.'
 
 describe('<Grid />', () => {

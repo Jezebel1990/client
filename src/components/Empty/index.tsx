@@ -1,4 +1,4 @@
-import Button from 'components/Button'
+import Button from '@/components/Button'
 import Link from 'next/link'
 import * as S from './styles'
 export type EmptyProps = {

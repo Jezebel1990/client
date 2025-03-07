@@ -1,4 +1,4 @@
-import GameItem, { GameItemProps } from 'components/GameItem'
+import GameItem, { GameItemProps } from '@/components/GameItem'
 
 import * as S from './styles' 
 

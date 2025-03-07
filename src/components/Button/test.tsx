@@ -3,7 +3,7 @@ import 'jest-styled-components'
 import { screen } from '@testing-library/react'
 import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
 import Button from '.'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from '@/utils/tests/helpers'
 
 describe('<Button />', () => {
   it('should render the medium size by default', () => {

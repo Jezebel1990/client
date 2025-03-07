@@ -202,7 +202,6 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       <h2
         class="c4 c5"
         color="white"
-        linecolor="secondary"
       >
         Contact Us
       </h2>
@@ -218,7 +217,6 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       <h2
         class="c4 c5"
         color="white"
-        linecolor="secondary"
       >
         Follow us
       </h2>
@@ -261,7 +259,6 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       <h2
         class="c4 c5"
         color="white"
-        linecolor="secondary"
       >
         Links
       </h2>
@@ -292,7 +289,6 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       <h2
         class="c4 c5"
         color="white"
-        linecolor="secondary"
       >
         Location
       </h2>
@@ -310,7 +306,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
   <div
     class="c6"
   >
-    Won Games 2024 © All rights reserved.
+    Won Games 2025 © All rights reserved.
   </div>
 </footer>
 `;

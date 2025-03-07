@@ -1,8 +1,9 @@
 const nextConfig = {
   experimental: {
-    cpus: 6,
+    workerThreads: false,
+    cpus: 2,
   },
-  staticPageGenerationTimeout: 600,
+  staticPageGenerationTimeout: 1200,
   images: {
     remotePatterns: [
       {

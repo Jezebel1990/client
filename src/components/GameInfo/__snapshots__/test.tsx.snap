@@ -195,7 +195,6 @@ exports[`<GameInfo /> should render game informations 1`] = `
   <h2
     class="c1"
     color="black"
-    linecolor="primary"
   >
     My Game Title
   </h2>

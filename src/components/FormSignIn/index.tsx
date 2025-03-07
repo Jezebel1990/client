@@ -1,9 +1,9 @@
-import TextField from 'components/TextField'
+import TextField from '@/components/TextField'
 import Link from 'next/link'
 import { Email, Lock } from 'styled-icons/material-outlined'
-import Button from 'components/Button'
+import Button from '@/components/Button'
 import * as S from './styles'
-import { FormWrapper, FormLink } from 'components/Form'
+import { FormWrapper, FormLink } from '@/components/Form'
 
 const FormSignIn = () => (
   <FormWrapper>

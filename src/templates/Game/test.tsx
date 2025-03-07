@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react'
-import galleryMock from 'components/Gallery/mock'
-import gameInfoMock from 'components/GameInfo/mock'
-import gameDetailsMock from 'components/GameDetails/mock'
-import gamesMock from 'components/GameCardSlider/mock'
-import highlightMock from 'components/Highlight/mock'
+import galleryMock from '@/components/Gallery/mock'
+import gameInfoMock from '@/components/GameInfo/mock'
+import gameDetailsMock from '@/components/GameDetails/mock'
+import gamesMock from '@/components/GameCardSlider/mock'
+import highlightMock from '@/components/Highlight/mock'
 import Game, { GameTemplateProps } from '.'
-import { GameDetailsProps } from 'components/GameDetails'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { GameDetailsProps } from '@/components/GameDetails'
+import { renderWithTheme } from '@/utils/tests/helpers'
 
 const props: GameTemplateProps = {
   cover: 'bg-image.jpg',

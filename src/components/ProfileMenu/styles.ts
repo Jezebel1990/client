@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components' 
+import styled, { css, DefaultTheme } from 'styled-components' 
 import media from 'styled-media-query'
 
 
@@ -17,10 +17,25 @@ ${media.greaterThan('medium')`
   `}
 `
 
-export const Link = styled.a`
-${({ theme }) => css`
+const linkModifiers = {
+  default: (theme: DefaultTheme) => css`
     background: ${theme.colors.white};
     color: ${theme.colors.black};
+`,
+
+
+active: (theme: DefaultTheme) => css`
+    background: ${theme.colors.primary};
+    color: ${theme.colors.white};
+  `
+}
+
+type LinkProps = {
+  isActive?: boolean
+}
+
+export const Link = styled.a<LinkProps>`
+  ${({ theme, isActive }) => css`
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -44,5 +59,8 @@ ${({ theme }) => css`
         display: none;
       }
     `}
+
+     ${!isActive && linkModifiers.default(theme)};
+    ${isActive && linkModifiers.active(theme)};
   `}
 `

@@ -1,5 +1,6 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils/tests/helpers'
+import theme from '@/styles/theme'
+import { renderWithTheme } from '@/utils/tests/helpers'
 
 import ProfileMenu from '.'
 

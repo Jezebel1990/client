@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import Showcase, { ShowcaseProps } from '.'
-import highlightMock from 'components/Highlight/mock'
-import gamesMock from 'components/GameCardSlider/mock'
+import highlightMock from '@/components/Highlight/mock'
+import gamesMock from '@/components/GameCardSlider/mock'
 
 export default {
   title: 'Showcase',

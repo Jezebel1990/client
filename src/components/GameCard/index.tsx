@@ -1,7 +1,7 @@
 import { AddShoppingCart } from '@styled-icons/material-outlined'
 import { StarBorder, Star } from '@styled-icons/material-rounded'
-import Ribbon, { RibbonColors, RibbonSizes } from 'components/Ribbon'
-import Button from 'components/Button'
+import Ribbon, { RibbonColors, RibbonSizes } from '@/components/Ribbon'
+import Button from '@/components/Button'
 import Image from 'next/image'
 import * as S from './styles'
 

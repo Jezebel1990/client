@@ -1,7 +1,7 @@
 import { tint } from 'polished'
 import styled, { css, DefaultTheme } from 'styled-components' 
 
-import * as ButtonStyles from 'components/Button/styles'
+import * as ButtonStyles from '@/components/Button/styles'
 
 
 export const Wrapper = styled.main`
