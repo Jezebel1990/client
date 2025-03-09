@@ -7,7 +7,7 @@ import cardsMock from '@/components/PaymentOptions/mock'
 
 export default function CartPage(props: CartProps) {
   return <Cart {...props} />
-}9
+}
 
 export async function getServerSideProps() {
   return {
