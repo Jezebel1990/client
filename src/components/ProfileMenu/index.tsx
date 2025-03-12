@@ -8,34 +8,29 @@ import {
 
 import * as S from "./styles";
 
-export const ProfileLinks = {
-  ME: "/profile/me",
-  CARDS: "/profile/cards",
-  ORDERS: "/profile/orders",
-} as const;
-
 export type ProfileMenuProps = {
-  activeLink?: typeof ProfileLinks[keyof typeof ProfileLinks];
-};
+  activeLink?: '/profile/me' | '/profile/cards' | '/profile/orders' | string
+} 
 
-const ProfileMenu: React.FC<ProfileMenuProps> = ({ activeLink }) => (
+
+const ProfileMenu  = ({ activeLink }: ProfileMenuProps) => (
   <S.Nav>
-    <Link href={ProfileLinks.ME} passHref>
-      <S.Link isActive={activeLink === ProfileLinks.ME} title="My profile">
+    <Link href="/profile/me" passHref>
+      <S.Link isActive={activeLink === '/profile/me'} title="My profile">
         <AccountCircle size={24} />
         <span>My profile</span>
       </S.Link>
     </Link>
 
-    <Link href={ProfileLinks.CARDS} passHref>
-      <S.Link isActive={activeLink === ProfileLinks.CARDS} title="My cards">
+    <Link href="/profile/cards" passHref>
+      <S.Link isActive={activeLink === '/profile/cards'} title="My cards">
         <CreditCard size={24} />
         <span>My cards</span>
       </S.Link>
     </Link>
 
-    <Link href={ProfileLinks.ORDERS} passHref>
-      <S.Link isActive={activeLink === ProfileLinks.ORDERS} title="My orders">
+    <Link href="/profile/orders" passHref>
+      <S.Link isActive={activeLink === '/profile/orders'} title="My orders">
         <FormatListBulleted size={24} />
         <span>My orders</span>
       </S.Link>
