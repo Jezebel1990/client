@@ -3,7 +3,7 @@ import CartList, { CartListProps } from '.';
 
 import mockItems from './mock';
 
-export default {
+const meta: Meta<CartListProps> = {
   title: 'CartList',
   component: CartList,
   args: {
@@ -12,7 +12,7 @@ export default {
   },
   argTypes: {
     items: {
-      control: { type: 'object' }, 
+      control: { type: 'object' },
     },
   },
   parameters: {
@@ -20,7 +20,9 @@ export default {
       default: 'won-dark',
     },
   },
-} as Meta<CartListProps>;
+};
+
+export default meta;
 
 export const Default: StoryObj<CartListProps> = {
   render: (args) => (
@@ -34,6 +36,14 @@ export const WithButton: StoryObj<CartListProps> = {
   render: (args) => (
     <div style={{ maxWidth: 800 }}>
       <CartList {...args} hasButton />
+    </div>
+  ),
+};
+
+export const Empty: StoryObj<CartListProps> = {
+  render: () => (
+    <div style={{ maxWidth: 800 }}>
+      <CartList />
     </div>
   ),
 };
