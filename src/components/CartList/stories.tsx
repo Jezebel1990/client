@@ -1,33 +1,39 @@
-import { Meta, StoryObj } from '@storybook/react' 
-import CartList, { CartListProps } from '.'
+import { Meta, StoryObj } from '@storybook/react';
+import CartList, { CartListProps } from '.';
 
-import mockItems from './mock'
+import mockItems from './mock';
 
+export default {
+  title: 'CartList',
+  component: CartList,
+  args: {
+    items: mockItems,
+    total: 'R$ 330,00',
+  },
+  argTypes: {
+    items: {
+      control: { type: 'object' }, 
+    },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'won-dark',
+    },
+  },
+} as Meta<CartListProps>;
 
- export default {
-     title: 'CartList',
-    component: CartList,
-      args: {
-        items: mockItems,
-        total: 'R$ 330,00'
-      },
-      argTypes: {
-        items: {
-          type: 'string'
-        }
-      },
-      parameters: {
-        backgrounds: {
-          default: 'won-dark'
-        }
-      }
- } as Meta 
- 
- 
- export const Default: StoryObj<CartListProps> = (args: any) => (
+export const Default: StoryObj<CartListProps> = {
+  render: (args) => (
     <div style={{ maxWidth: 800 }}>
-    <CartList {...args} />
-  </div>
- ) 
+      <CartList {...args} />
+    </div>
+  ),
+};
 
-Default.args = {}
+export const WithButton: StoryObj<CartListProps> = {
+  render: (args) => (
+    <div style={{ maxWidth: 800 }}>
+      <CartList {...args} hasButton />
+    </div>
+  ),
+};
