@@ -3,11 +3,13 @@ import { useState } from 'react'
 import * as S from './styles'
 import Logo from '@/components/Logo'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
-import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
 import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import Button from '@/components/Button'
 import MediaMatch from '@/components/MediaMatch'
+import CartDropdown from '@/components/CartDropdown'
+import CartIcon from '@/components/CartIcon'
+import UserDropdown from '@/components/UserDropdown'
 
 export type MenuProps = {
   username?: string | null
@@ -21,26 +23,26 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
     <S.Wrapper>
       <MediaMatch lessThan="medium">
         <S.IconWrapper onClick={() => setIsOpen(true)}>
-          <MenuIcon aria-label="Open Menu" />
+          <MenuIcon aria-label="Open Menu" role="button" />
         </S.IconWrapper>
       </MediaMatch>
 
       <S.LogoWrapper>
-        <Link href="/" passHref legacyBehavior>
-          <a>
+        <Link href="/" passHref>
+          <S.MenuLink as="a">
             <Logo hideOnMobile={hideOnMobile} />
-          </a>
+          </S.MenuLink>
         </Link>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref>
             <S.MenuLink as="a">Home</S.MenuLink>
           </Link>
-          <S.MenuLink as="a" href="#">
-            Explore
-          </S.MenuLink>
+          <Link href="/games" passHref>
+            <S.MenuLink as="a">Explore</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -49,43 +51,64 @@ const Menu = ({ username, hideOnMobile = false }: MenuProps) => {
           <SearchIcon aria-label="Search" />
         </S.IconWrapper>
         <S.IconWrapper>
-          <ShoppingCartIcon aria-label="Open Shopping Cart" />
-        </S.IconWrapper>
-        {!username && (
           <MediaMatch greaterThan="medium">
-            <Link href="/sign-in" passHref legacyBehavior>
-              <Button as="a">Sign in</Button>
+            <CartDropdown />
+          </MediaMatch>
+          <MediaMatch lessThan="medium">
+            <Link href="/cart" passHref>
+              <S.MenuLink as="a">
+                <CartIcon />
+              </S.MenuLink>
             </Link>
           </MediaMatch>
-        )}
+        </S.IconWrapper>
+        <MediaMatch greaterThan="medium">
+          {!username ? (
+            <Link href="/sign-in" passHref>
+              <Button as="a">Sign in</Button>
+            </Link>
+          ) : (
+            <UserDropdown username={username} />
+          )}
+        </MediaMatch>
       </S.MenuGroup>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
-        <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+        <CloseIcon
+          aria-label="Close Menu"
+          role="button"
+          onClick={() => setIsOpen(false)}
+        />
         <S.MenuNav>
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/" passHref>
             <S.MenuLink as="a">Home</S.MenuLink>
           </Link>
 
-          <S.MenuLink as="a" href="#">Explore</S.MenuLink>
+          <Link href="/games" passHref>
+            <S.MenuLink as="a">Explore</S.MenuLink>
+          </Link>
 
           {!!username && (
             <>
-              <S.MenuLink as="a" href="#">My account</S.MenuLink>
-              <S.MenuLink as="a" href="#">Wishlist</S.MenuLink>
+              <Link href="/profile/me" passHref>
+                <S.MenuLink as="a">My profile</S.MenuLink>
+              </Link>
+              <Link href="/profile/wishlist" passHref>
+                <S.MenuLink as="a">Wishlist</S.MenuLink>
+              </Link>
             </>
           )}
         </S.MenuNav>
 
         {!username && (
           <S.RegisterBox>
-            <Link href="/sign-in" passHref legacyBehavior>
+            <Link href="/sign-in" passHref>
               <Button fullWidth size="large" as="a">
                 Sign In
               </Button>
             </Link>
             <span>or</span>
-            <Link href="/sign-up" passHref legacyBehavior>
+            <Link href="/sign-up" passHref>
               <S.CreateAccount title="Sign Up" as="a">
                 Sign Up
               </S.CreateAccount>
