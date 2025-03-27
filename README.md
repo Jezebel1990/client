@@ -4,6 +4,8 @@
 ![Sign in](public/img/sign-in.png)
 ![Home Page](public/img/home-page.png)
 ![Game Page](public/img/game.png)
+![Explore Page](public/img/explore.png)
+![404](public/img/404.png)
 
 This application was designed to offer customers the best shopping experience, including features such as:
 
