@@ -1,35 +1,52 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "node16",
-    "moduleResolution": "node16",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["node", "jest", "@testing-library/jest-dom"],
-    "plugins": [{ "name": "next" }],
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom",
+      "next"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ]
     },
     "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src",
-    ".jest/setup.ts",
+    "jest.setup.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "CartList"  ],
+  ],
   "exclude": [
     "node_modules",
     ".jest/**",
