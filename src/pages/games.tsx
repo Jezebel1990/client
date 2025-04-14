@@ -11,7 +11,8 @@ import { QUERY_GAMES } from '@/graphql/queries/games'
   const apolloClient = initializeApollo()
 
  const { data } = await apolloClient.query({ 
-  query: QUERY_GAMES
+  query: QUERY_GAMES,
+  variables: { limit: 9 }
  })
 
    return {
