@@ -10,6 +10,12 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.imgur.com',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+        pathname: '/uploads/**',
+      },
     ],
   },
   async headers() {
@@ -27,7 +33,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   compiler: {
-      styledComponents: true,
+    styledComponents: true,
   },
 }
 

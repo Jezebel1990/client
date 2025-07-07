@@ -10,6 +10,7 @@ export default {
     },
   },
   args: {
+    slug: 'population-zero',
     title: 'Population Zero',
     developer: 'Rockstar Games',
     img: 'https://i.imgur.com/gQSWehi.png',

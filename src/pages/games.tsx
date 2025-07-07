@@ -5,31 +5,34 @@ import { QueryGames, QueryGamesVariables } from '@/graphql/generated/QueryGames'
 import GamesTemplate, { GamesTemplateProps } from '@/templates/Games'
 import filterItemsMock from '@/components/ExploreSidebar/mock'
 
- export default function GamesPage(props: GamesTemplateProps) {
-   return <GamesTemplate {...props} />
- }
+export default function GamesPage(props: GamesTemplateProps) {
+  return <GamesTemplate {...props} />
+}
 
- export async function getStaticProps() {
+export async function getStaticProps() {
   const apolloClient = initializeApollo()
 
- const { data } = await apolloClient.query<QueryGames, QueryGamesVariables>({ 
-  query: QUERY_GAMES,
-  variables: { limit: 9 }
- })
+  const { data } = await apolloClient.query<QueryGames, QueryGamesVariables>({
+    query: QUERY_GAMES,
+    variables: { limit: 9 }
+  })
 
-   return {
-     props: {
-       revalidade: 60,
-      games: data.games.map((game:any) => ({
-         title: game.name,
-         developer: game.developers[0].name,
-         img: `http://localhost:1337${game.cover!.url}`,
-         price: new Intl.NumberFormat('en', { 
-          style: 'currency', 
+  return {
+    props: {
+      revalidate: 60,
+      games: data.games.map((game) => ({
+        title: game.name,
+        slug: game.slug,
+        developer: game.developers[0]?.name || 'Unknown',
+        img: game.cover?.url
+          ? `http://localhost:1337${game.cover.url}`
+          : 'https://i.imgur.com/nCI1sci.jpeg',
+        price: new Intl.NumberFormat('en', {
+          style: 'currency',
           currency: 'USD'
         }).format(game.price)
-     })),
-       filterItems: filterItemsMock
-     }
-   }
- }
+      })),
+      filterItems: filterItemsMock
+    }
+  }
+}
