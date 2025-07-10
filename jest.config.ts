@@ -12,6 +12,7 @@ const config: Config = {
     '!src/types/**',
     '!src/**/stories.tsx',
     '!src/styles/**',
+    '!src/utils/apollo.ts'
   ],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
