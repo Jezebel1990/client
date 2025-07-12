@@ -24,7 +24,7 @@ export default {
     },
   },
   colors: {
-    primary: '#13D7E0', //blue
+    primary: '#007ACC', //blue
     secondary: '#6d47cc', //purple
     mainBg: '#111111',
     lightBg: '#F2F2F2',
