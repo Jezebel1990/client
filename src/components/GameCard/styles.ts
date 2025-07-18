@@ -11,18 +11,18 @@ export const Wrapper = styled.article`
   `}
 `
 
-export const ImageBox = styled.a`
-  height: 14rem;
+export const ImageBox = styled.div`
+  height: 16rem;
   width: 100%;
   background: #f6f7f8;
   background-image: linear-gradient(
     to right,
     #f6f7f8 0%,
-    #edeef1 20%,
+    #8f96adff 20%,
     #f6f7f8 40%,
     #f6f7f8 100%
   );
-  background-size: 80rem 14rem;
+  background-size: 80rem 16rem;
   animation: placeholderShimmer 1s linear infinite forwards;
 
   @keyframes placeholderShimmer {
@@ -35,6 +35,7 @@ export const ImageBox = styled.a`
     }
   }
 `
+
 export const Content = styled.div`
   ${({ theme }) => css`
     display: flex;
@@ -46,9 +47,13 @@ export const Content = styled.div`
   `}
 `
 
-export const Info = styled.a`
+export const Info = styled.div`
   max-width: calc(100% - 2.5rem);
   text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export const Title = styled.h3`
@@ -59,6 +64,7 @@ export const Title = styled.h3`
     color: ${theme.colors.black};
   `}
 `
+
 export const Developer = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
@@ -66,6 +72,7 @@ export const Developer = styled.h4`
     color: ${theme.colors.lightGray};
   `}
 `
+
 export const FavButton = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
@@ -79,6 +86,7 @@ export const FavButton = styled.div`
     }
   `}
 `
+
 export const BuyBox = styled.div`
   ${({ theme }) => css`
     display: flex;
@@ -87,6 +95,7 @@ export const BuyBox = styled.div`
     margin-top: ${theme.spacings.xxsmall};
   `}
 `
+
 type PriceProps = {
   isPromotional?: boolean
 }
@@ -104,10 +113,12 @@ const priceModifiers = {
     color: ${theme.colors.lightGray};
     text-decoration: line-through;
     margin-right: ${theme.spacings.xxsmall};
-  `,
+  `
 }
 
-export const Price = styled.div<PriceProps>`
+export const Price = styled.div.withConfig({
+  shouldForwardProp: (prop) => prop !== 'isPromotional'
+})<PriceProps>`
   ${({ theme, isPromotional }) => css`
     display: inline-flex;
     font-weight: ${theme.font.bold};
