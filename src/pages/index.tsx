@@ -14,7 +14,7 @@ export async function getStaticProps() {
   const apolloClient = initializeApollo()
 
   const {
-    data: { banners, newGames, upcomingGames, freeGames }
+    data: { banners, newGames, upcomingGames, freeGames, sections }
   } = await apolloClient.query<QueryHome>({ query: QUERY_HOME })
 
   return {
@@ -42,8 +42,16 @@ export async function getStaticProps() {
         price: game.price
       })),
       mostPopularHighlight: highlightMock,
-      mostPopularGames: gamesMock,
-      upcomingGames: upcomingGames.map((game) => ({
+      mostPopularGames: sections!.popularGames!.games.map((game) => ({
+      title: game.name,
+        slug: game.slug,
+        developer: game.developers[0]?.name || 'Unknown',
+        img: game.cover?.url
+          ? `http://localhost:1337${game.cover?.url}`
+          : 'https://i.imgur.com/nCI1sci.jpeg',
+        price: game.price
+      })),
+        upcomingGames: upcomingGames.map((game) => ({
         title: game.name,
         slug: game.slug,
         developer: game.developers[0]?.name || 'Unknown',
