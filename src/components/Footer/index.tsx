@@ -7,12 +7,12 @@ import Logo from '@/components/Logo'
 const Footer = () => (
   <S.Wrapper>
     <Logo color="white" />
+
     <S.Content>
       <S.Column>
         <Heading color="white" size="small" lineBottom lineColor="secondary">
           Contact Us
         </Heading>
-
         <a href="mailto:sac@wongames.com">sac@wongames.com</a>
       </S.Column>
 
@@ -57,9 +57,15 @@ const Footer = () => (
           Links
         </Heading>
         <nav aria-labelledby="footer resources">
-          <Link href="/">Home</Link>
-          <Link href="/games">Store</Link>
-          <Link href="/search">Buscar</Link>
+          <Link href="/" passHref>
+            <a>Home</a>
+          </Link>
+          <Link href="/games" passHref>
+            <a>Store</a>
+          </Link>
+          <Link href="/search" passHref>
+            <a>Buscar</a>
+          </Link>
         </nav>
       </S.Column>
 

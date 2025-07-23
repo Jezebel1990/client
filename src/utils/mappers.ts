@@ -19,6 +19,21 @@ export const bannerMapper = (banners: QueryHome_banners[]) => {
   }))
 }
 
+export const gamesMapper = (games: QueryGames_games[] | null | undefined) => {
+  return (
+    games &&
+    games.map((game) => ({
+      title: game.name,
+      slug: game.slug,
+     developer: game.developers[0]?.name || 'Unknown',
+      img: game.cover?.url
+        ? `http://localhost:1337${game.cover.url}`
+        : 'https://i.imgur.com/nCI1sci.jpeg',
+      price: game.price
+    }))
+  )
+}
+
 export const highlightMapper = (
   highlight: QueryHome_sections_freeGames_highlight | null | undefined
 ) => {
